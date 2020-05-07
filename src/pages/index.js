@@ -7,13 +7,14 @@ import Button from "../components/button"
 
 class IndexPage extends React.Component {
   render() {
-    const siteTitle = "Gatsby Starter Personal Website"
+    const siteTitle = "Grace | Design & Code"
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         <SEO
           title="Home"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          keywords={[`projects`, `gatsby`, `javascript`, `react`]}
         />
         <img style={{ margin: 0 }} src="./GatsbyScene.svg" alt="Gatsby Scene" />
         <h1>
@@ -28,8 +29,8 @@ class IndexPage extends React.Component {
           default starter blog running on Netlify CMS.
         </p>
         <p>Now go build something great!</p>
-        <Link to="/blog/">
-          <Button marginTop="35px">Go to Blog</Button>
+        <Link to="/projects/">
+          <Button marginTop="35px">Go to Projects</Button>
         </Link>
       </Layout>
     )

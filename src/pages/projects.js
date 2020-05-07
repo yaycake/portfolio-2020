@@ -7,18 +7,18 @@ import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import Button from "../components/button"
 
-class Blog extends React.Component {
+class Project extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMdx.edges
+    const projects = data.allMdx.edges
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
         <Bio />
         <div style={{ margin: "20px 0 40px" }}>
-          {posts.map(({ node }) => {
+          {projects.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
               <div key={node.fields.slug}>
@@ -29,7 +29,7 @@ class Blog extends React.Component {
                 >
                   <Link
                     style={{ boxShadow: `none` }}
-                    to={`project${node.fields.slug}`}
+                    to={`projects${node.fields.slug}`}
                   >
                     {title}
                   </Link>
@@ -52,7 +52,7 @@ class Blog extends React.Component {
   }
 }
 
-export default Blog
+export default Project
 
 export const pageQuery = graphql`
   query {

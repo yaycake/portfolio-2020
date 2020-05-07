@@ -58,7 +58,7 @@ exports.createPages = ({ graphql, actions }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
-  fnImagesToRelative(node)
+  // fnImagesToRelative(node)
 
   if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode })
