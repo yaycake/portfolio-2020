@@ -1,6 +1,5 @@
 backend:
-  name: test-repo
-
+  name: github
   repo: yaycake/portfolio-2020
 
 media_folder: static/assets
