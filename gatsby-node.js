@@ -1,10 +1,13 @@
 const path = require(`path`)
+
 const { createFilePath } = require(`gatsby-source-filesystem`)
+
+const { fnImagesToRelative } = require('gatsby-remark-relative-images');
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const projectPost = path.resolve(`./src/templates/project.js`)
   return graphql(
     `
       {
@@ -30,18 +33,18 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    // Create blog posts pages.
-    const posts = result.data.allMdx.edges
+    // Create project pages.
+    const projects = result.data.allMdx.edges
 
-    posts.forEach((post, index) => {
-      const previous = index === posts.length - 1 ? null : posts[index + 1].node
-      const next = index === 0 ? null : posts[index - 1].node
+    projects.forEach((project, index) => {
+      const previous = index === projects.length - 1 ? null : projects[index + 1].node
+      const next = index === 0 ? null : projects[index - 1].node
 
       createPage({
-        path: `blog${post.node.fields.slug}`,
-        component: blogPost,
+        path: `projects${project.node.fields.slug}`,
+        component: projectPost,
         context: {
-          slug: post.node.fields.slug,
+          slug: project.node.fields.slug,
           previous,
           next,
         },
@@ -55,6 +58,8 @@ exports.createPages = ({ graphql, actions }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
+  // fnImagesToRelative(node)
+
   if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode })
     createNodeField({
@@ -64,3 +69,4 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
+

@@ -7,13 +7,17 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: blog
-    label: Blog
-    folder: content/blog
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
     create: true
     fields:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
+      - { name: featuredImage, label: Featured Image }
+      - { name: skills, label: Skills }
+      - { name: tools, label: tools }
+      - { name: engagement_period, label: Engagement Period }
       - { name: description, label: Description }
       - { name: body, label: Body, widget: markdown }
