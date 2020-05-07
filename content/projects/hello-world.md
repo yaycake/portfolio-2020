@@ -1,6 +1,13 @@
 ---
+path: hello_world
+date: 2020-05-07T07:46:47.518Z
 title: Hello World
+featuredImage: colors.jpg
 date: "2015-05-01T22:12:03.284Z"
+skills: react, graphql, gatsby
+tools: sketch, rwd
+engagement_period: today
+description: this is the description
 ---
 
 This is my first post on my new fake blog! How exciting!
