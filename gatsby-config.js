@@ -11,10 +11,9 @@ module.exports = {
   },
   plugins: [
     `gatsby-remark-relative-images`,
-    `gatsby-plugin-netlify-cms`,
+   
     `gatsby-plugin-styled-components`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+ 
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-feed-mdx`,
@@ -22,17 +21,34 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/projects`,
-        name: `projects`,
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
+        path: `${__dirname}/content/projects`,
+        name: `projects`,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`, 
+      options: {
+        plugins: [
+          `gatsby-remark-relative-images`, 
+         {
+           resolve: `gatsby-remark-images`, 
+           options: {
+            maxWidth: 590,
+           }
+         }
+        ]
+      }
+    }, 
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

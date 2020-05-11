@@ -16,12 +16,13 @@ class Project extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
-        <Bio />
+       
         <div style={{ margin: "20px 0 40px" }}>
           {projects.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
               <div key={node.fields.slug}>
+                <img src={node.frontmatter.featuredImage} />
                 <h3
                   style={{
                     marginBottom: rhythm(1 / 4),
@@ -33,6 +34,7 @@ class Project extends React.Component {
                   >
                     {title}
                   </Link>
+                  
                 </h3>
                 <small>{node.frontmatter.date}</small>
                 <p
@@ -70,6 +72,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
+            featuredImage
             title
             description
           }

@@ -46,7 +46,7 @@ exports.createPages = ({ graphql, actions }) => {
         context: {
           slug: project.node.fields.slug,
           previous,
-          next,
+          next
         },
       })
     })
@@ -56,17 +56,16 @@ exports.createPages = ({ graphql, actions }) => {
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
-
   // fnImagesToRelative(node)
-
+  const { createNodeField } = actions
   if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode })
     createNodeField({
-      name: `slug`,
       node,
+      name: `slug`,
       value,
     })
   }
 }
+
 
