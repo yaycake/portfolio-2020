@@ -19,6 +19,7 @@ class ProjectTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
+        <img src={post.frontmatter.featuredImage}/>
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{

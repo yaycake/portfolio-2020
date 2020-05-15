@@ -10,7 +10,7 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-remark-relative-images`,
+    // `gatsby-remark-relative-images`,
    
     `gatsby-plugin-styled-components`,
  
@@ -28,27 +28,41 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/images`,
+        name: `images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/content/projects`,
         name: `projects`,
       },
     },
-    `gatsby-transformer-sharp`,
+   
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+
     {
       resolve: `gatsby-transformer-remark`, 
       options: {
         plugins: [
-          `gatsby-remark-relative-images`, 
-         {
-           resolve: `gatsby-remark-images`, 
-           options: {
-            maxWidth: 590,
-           }
-         }
+          {
+            resolve: `gatsby-remark-relative-images`, 
+            options: {
+              name: 'images'
+            }
+          },
+          
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590
+            },
+          }
         ]
       }
     }, 
-    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -78,6 +92,11 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve:  `gatsby-plugin-netlify-cms`,
+      options: {}
+    },
+   
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
