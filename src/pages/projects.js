@@ -11,7 +11,7 @@ class Project extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const projects = data.allMdx.edges
+    const projects = data.allMarkdownRemark.edges
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -21,7 +21,7 @@ class Project extends React.Component {
           {projects.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <div key={node.fields.slug}>
+              <div key={node.frontmatter.path}>
                 <img src={node.frontmatter.featuredImage} />
                 <h3
                   style={{
@@ -30,7 +30,7 @@ class Project extends React.Component {
                 >
                   <Link
                     style={{ boxShadow: `none` }}
-                    to={`projects${node.fields.slug}`}
+                    to={`projects${node.frontmatter.path}`}
                   >
                     {title}
                   </Link>
@@ -63,21 +63,49 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt
-          fields {
-            slug
-          }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             featuredImage
             title
             description
+            path
+            skills
+            tools
+            engagement_period
           }
         }
       }
     }
   }
 `
+
+
+// export const pageQuery = graphql`
+//   query {
+//     site {
+//       siteMetadata {
+//         title
+//       }
+//     }
+//     allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+//       edges {
+//         node {
+//           excerpt
+//           fields {
+//             slug
+//           }
+//           frontmatter {
+//             date(formatString: "MMMM DD, YYYY")
+//             featuredImage
+//             title
+//             description
+//           }
+//         }
+//       }
+//     }
+//   }
+// `

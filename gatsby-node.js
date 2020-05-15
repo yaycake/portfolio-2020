@@ -2,7 +2,7 @@ const path = require(`path`)
 
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-const { fmImagesToRelative } = require('gatsby-remark-relative-images');
+const { fmImagesToRelative } = require(`gatsby-remark-relative-images`);
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -11,17 +11,15 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       {
-        allMdx(
+        allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
           edges {
             node {
-              fields {
-                slug
-              }
               frontmatter {
                 title
+                path
               }
             }
           }
@@ -34,17 +32,17 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     // Create project pages.
-    const projects = result.data.allMdx.edges
+    const projects = result.data.allMarkdownRemark.edges
 
     projects.forEach((project, index) => {
       const previous = index === projects.length - 1 ? null : projects[index + 1].node
       const next = index === 0 ? null : projects[index - 1].node
 
       createPage({
-        path: `projects${project.node.fields.slug}`,
+        path: `projects${project.node.frontmatter.path}`,
         component: projectPost,
         context: {
-          slug: project.node.fields.slug,
+          slug: project.node.frontmatter.path,
           previous,
           next
         },
@@ -60,7 +58,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   fmImagesToRelative(node)
 
   const { createNodeField } = actions
-  if (node.internal.type === `Mdx`) {
+  if (node.internal.type === `Markdown`) {
     const value = createFilePath({ node, getNode })
     createNodeField({
       node,
@@ -68,6 +66,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     })
   }
+  fmImagesToRelative(node)
 }
 
 

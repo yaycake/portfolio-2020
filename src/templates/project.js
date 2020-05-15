@@ -21,6 +21,7 @@ class ProjectTemplate extends React.Component {
         />
         <img src={post.frontmatter.featuredImage}/>
         <h1>{post.frontmatter.title}</h1>
+       {console.log(post.frontmatter)}
         <p
           style={{
             ...scale(-1 / 5),
@@ -31,7 +32,9 @@ class ProjectTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
-        <MDXRenderer>{post.body}</MDXRenderer>
+        <MDXRenderer>
+          {post.body}
+          </MDXRenderer>
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -50,14 +53,14 @@ class ProjectTemplate extends React.Component {
         >
           <li>
             {previous && (
-              <Link to={`projects${previous.fields.slug}`} rel="prev">
+              <Link to={`projects${previous.frontmatter.path}`} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={`projects${next.fields.slug}`} rel="next">
+              <Link to={`projects${next.frontmatter.path}`} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}
@@ -71,22 +74,43 @@ class ProjectTemplate extends React.Component {
 export default ProjectTemplate
 
 export const pageQuery = graphql`
-  query ProjectBySlug($slug: String!) {
+  query ProjectByPath($path: String!) {
     site {
       siteMetadata {
         title
         author
       }
     }
-    mdx(fields: { slug: { eq: $slug } }) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
       id
       excerpt(pruneLength: 160)
-      body
+      html
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        featuredImage
       }
     }
   }
 `
+// export const pageQuery = graphql`
+//   query ProjectBySlug($slug: String!) {
+//     site {
+//       siteMetadata {
+//         title
+//         author
+//       }
+//     }
+//     mdx(fields: { slug: { eq: $slug } }) {
+//       id
+//       excerpt(pruneLength: 160)
+//       body
+//       frontmatter {
+//         title
+//         date(formatString: "MMMM DD, YYYY")
+//         description
+//       }
+//     }
+//   }
+// `
