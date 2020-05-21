@@ -33,7 +33,7 @@ class Project extends React.Component {
                 >
                   <Link
                     style={{ boxShadow: `none` }}
-                    to={`project${node.frontmatter.path}`}
+                    to={`project${node.fields.slug}`}
                   >
                     {title}
                   </Link>
@@ -70,8 +70,10 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
+          fields {
+            slug
+          }
           frontmatter {
-            path
             date(formatString: "MMMM DD, YYYY")
             featuredImage {
               childImageSharp {

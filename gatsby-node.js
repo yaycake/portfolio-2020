@@ -17,9 +17,11 @@ exports.createPages = ({ graphql, actions }) => {
         ) {
           edges {
             node {
+              fields {
+                slug
+              }
               frontmatter {
                 title
-                path
               }
             }
           }
@@ -37,14 +39,13 @@ exports.createPages = ({ graphql, actions }) => {
     projects.forEach((project, index) => {
       const previous = index === projects.length - 1 ? null : projects[index + 1].node
       const next = index === 0 ? null : projects[index - 1].node
-
-      console.log(`PATH: ${project.node.frontmatter.path}`)
-
+     
+      
       createPage({
-        path: `project${project.node.frontmatter.path}`,
+        path: `project${project.node.fields.slug}`,
         component: projectPost,
         context: {
-          path: project.node.frontmatter.path,
+          slug: project.node.fields.slug,
           previous,
           next
         },
@@ -63,12 +64,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode })
     createNodeField({
+      name: `slug`,
       node,
-      name: `path`,
       value,
     })
   }
-  fmImagesToRelative(node)
+
 }
 
 

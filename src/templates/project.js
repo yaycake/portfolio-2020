@@ -74,14 +74,14 @@ class ProjectTemplate extends React.Component {
 export default ProjectTemplate
 
 export const pageQuery = graphql`
-  query ProjectByPath($path: String!) {
+  query ProjectBySlug($slug: String!) {
     site {
       siteMetadata {
         title
         author
       }
     }
-    mdx( frontmatter: { path: { eq: $path } }) {
+    mdx( fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
       body
