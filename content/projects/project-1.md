@@ -1,5 +1,5 @@
 ---
-path: project_2
+path: /project_2
 date: 2020-05-21T07:46:26.713Z
 title: Project 2
 featuredImage: /assets/colors.jpeg
