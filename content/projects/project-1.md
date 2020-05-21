@@ -1,14 +1,14 @@
 ---
-path: project_1
+path: project_2
 date: 2020-05-21T07:46:26.713Z
-title: Project 1
-featuredImage: /assets/e7c04f0e-ebfe-4f6a-ba3a-1956a1af4d7f.jpg
-skills: Baby Dog
-tools: Doggin it
+title: Project 2
+featuredImage: /assets/colors.jpeg
+skills: Color palette
+tools: Color me timbers
 engagement_period: January 2018- February 2018
-description: This is the description of project 1
+description: This is the description of project 2
 ---
-## Hello Project Body. 
+## Hello Project Body.
 
 I am just the body of a project. blahblahblahblah. 
 
@@ -19,4 +19,4 @@ I am just the body of a project. blahblahblahblah.
 
 Heidy ho
 
-![image caption of baby](/assets/b9e19055-26f5-425d-b6d0-f635b929fd40.jpg "Babyshka")
+![image caption of image](/assets/journey_3.png "Commute Vs Explore")
