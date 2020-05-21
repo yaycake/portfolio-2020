@@ -74,26 +74,26 @@ class ProjectTemplate extends React.Component {
 export default ProjectTemplate
 
 export const pageQuery = graphql`
-  query ProjectByPath($path: String!) {
+  query ProjectBySlug($path: String!) {
     site {
       siteMetadata {
         title
         author
       }
     }
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    mdx( frontmatter: { path: { eq: $path } }) {
       id
       excerpt(pruneLength: 160)
-      html
+      body
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
         description
-        featuredImage
       }
     }
   }
 `
+
 // export const pageQuery = graphql`
 //   query ProjectBySlug($slug: String!) {
 //     site {

@@ -11,7 +11,7 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       {
-        allMarkdownRemark(
+        allMdx(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
@@ -32,14 +32,14 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     // Create project pages.
-    const projects = result.data.allMarkdownRemark.edges
+    const projects = result.data.allMdx.edges
 
     projects.forEach((project, index) => {
       const previous = index === projects.length - 1 ? null : projects[index + 1].node
       const next = index === 0 ? null : projects[index - 1].node
 
       createPage({
-        path: `projects${project.node.frontmatter.path}`,
+        path: `project${project.node.frontmatter.path}`,
         component: projectPost,
         context: {
           slug: project.node.frontmatter.path,

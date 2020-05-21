@@ -1,3 +1,10 @@
+var netlifyCmsPaths = {
+  resolve: `gatsby-plugin-netlify-cms-paths`,
+  options: {
+    cmsConfig: `/static/admin/config.yml`,
+  },
+}
+
 module.exports = {
   siteMetadata: {
     // edit below
@@ -10,6 +17,7 @@ module.exports = {
     },
   },
   plugins: [
+    netlifyCmsPaths,
     // `gatsby-remark-relative-images`,
    
     `gatsby-plugin-styled-components`,
@@ -41,6 +49,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`, 
       options: {
         plugins: [
+          netlifyCmsPaths,
           {
             resolve: `gatsby-remark-relative-images`
           },
@@ -85,7 +94,12 @@ module.exports = {
     },
     {
       resolve:  `gatsby-plugin-netlify-cms`,
-      options: {}
+      options: {
+       
+        // Path to your Netlify CMS config file
+        cmsConfig: `/static/admin/config.yml`
+        
+      }
     },
    
     {

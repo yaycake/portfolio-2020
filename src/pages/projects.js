@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Image from "gatsby-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -11,7 +12,7 @@ class Project extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const projects = data.allMarkdownRemark.edges
+    const projects = data.allMdx.edges
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -22,7 +23,9 @@ class Project extends React.Component {
             const title = node.frontmatter.title || node.fields.slug
             return (
               <div key={node.frontmatter.path}>
-                <img src={node.frontmatter.featuredImage} />
+                {/* <Image fluid ={node.frontmatter.featuredImage.childImageSharp.fluid}></Image> */}
+                {/* {console.log(node.frontmatter.featuredImage)} */}
+             
                 <h3
                   style={{
                     marginBottom: rhythm(1 / 4),
@@ -30,7 +33,7 @@ class Project extends React.Component {
                 >
                   <Link
                     style={{ boxShadow: `none` }}
-                    to={`projects${node.frontmatter.path}`}
+                    to={`projects/${node.frontmatter.path}`}
                   >
                     {title}
                   </Link>
@@ -63,19 +66,21 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx {
       edges {
         node {
           excerpt
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
-            featuredImage
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             title
             description
-            path
-            skills
-            tools
-            engagement_period
           }
         }
       }
