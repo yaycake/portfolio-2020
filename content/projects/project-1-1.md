@@ -1,5 +1,5 @@
 ---
-path: /project_1
+path: project_1
 date: 2020-05-21T07:46:26.713Z
 title: Project 1
 featuredImage: /assets/e7c04f0e-ebfe-4f6a-ba3a-1956a1af4d7f.jpg
