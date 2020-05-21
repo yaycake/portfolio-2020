@@ -33,7 +33,7 @@ class Project extends React.Component {
                 >
                   <Link
                     style={{ boxShadow: `none` }}
-                    to={`project/${node.frontmatter.path}`}
+                    to={`project${node.frontmatter.path}`}
                   >
                     {title}
                   </Link>

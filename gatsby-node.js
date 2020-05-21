@@ -38,11 +38,13 @@ exports.createPages = ({ graphql, actions }) => {
       const previous = index === projects.length - 1 ? null : projects[index + 1].node
       const next = index === 0 ? null : projects[index - 1].node
 
+      console.log(`PATH: ${project.node.frontmatter.path}`)
+
       createPage({
         path: `project${project.node.frontmatter.path}`,
         component: projectPost,
         context: {
-          slug: project.node.frontmatter.path,
+          path: project.node.frontmatter.path,
           previous,
           next
         },
@@ -58,11 +60,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   fmImagesToRelative(node)
 
   const { createNodeField } = actions
-  if (node.internal.type === `Markdown`) {
+  if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode })
     createNodeField({
       node,
-      name: `slug`,
+      name: `path`,
       value,
     })
   }
