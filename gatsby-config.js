@@ -50,10 +50,7 @@ module.exports = {
       options: {
         plugins: [
           netlifyCmsPaths,
-          {
-            resolve: `gatsby-remark-relative-images`
-          },
-          
+          `gatsby-remark-relative-images`,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -69,11 +66,10 @@ module.exports = {
         extensions: [".mdx", ".md"],
         gatsbyRemarkPlugins: [
           netlifyCmsPaths,
+          `gatsby-remark-relative-images`,
           {
-            resolve: `gatsby-remark-relative-images`,
-            options: {
-              maxWidth: 590,
-            },
+            resolve: `gatsby-remark-images`,
+            options: {},
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
