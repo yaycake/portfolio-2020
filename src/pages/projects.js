@@ -23,7 +23,7 @@ class Project extends React.Component {
             const title = node.frontmatter.title || node.fields.slug
             return (
               <div key={node.frontmatter.path}>
-                {/* <Image fluid ={node.frontmatter.featuredImage.childImageSharp.fluid}></Image> */}
+                <Image fluid ={node.frontmatter.featuredImage.childImageSharp.fluid}></Image>
                 {/* {console.log(node.frontmatter.featuredImage)} */}
              
                 <h3
@@ -33,7 +33,7 @@ class Project extends React.Component {
                 >
                   <Link
                     style={{ boxShadow: `none` }}
-                    to={`projects/${node.frontmatter.path}`}
+                    to={`project/${node.frontmatter.path}`}
                   >
                     {title}
                   </Link>
@@ -71,6 +71,7 @@ export const pageQuery = graphql`
         node {
           excerpt
           frontmatter {
+            path
             date(formatString: "MMMM DD, YYYY")
             featuredImage {
               childImageSharp {

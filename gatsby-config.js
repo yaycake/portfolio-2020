@@ -68,6 +68,7 @@ module.exports = {
       options: {
         extensions: [".mdx", ".md"],
         gatsbyRemarkPlugins: [
+          netlifyCmsPaths,
           {
             resolve: `gatsby-remark-relative-images`,
             options: {
