@@ -14,7 +14,12 @@ class ProjectTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout 
+        location={this.props.location} 
+        title={siteTitle} 
+        subMenu={ {
+        title: post.frontmatter.title
+      }}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
@@ -53,14 +58,14 @@ class ProjectTemplate extends React.Component {
         >
           <li>
             {previous && (
-              <Link to={`projects${previous.frontmatter.path}`} rel="prev">
+              <Link to={`project${previous.fields.slug}`} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={`projects${next.frontmatter.path}`} rel="next">
+              <Link to={`project${next.frontmatter.path}`} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}

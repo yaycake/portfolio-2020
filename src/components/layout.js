@@ -1,8 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-
+import Header from "./Header"
+import SocialMenu from "./SocialMenu"
+import SubMenu from "./SubMenu.js"
 import { rhythm, scale } from "../utils/typography"
+
+import styles from "./layout.module.scss"
+
 
 class Layout extends React.Component {
   render() {
@@ -36,7 +41,7 @@ class Layout extends React.Component {
       header = (
         <h3
           style={{
-            fontFamily: `Montserrat, sans-serif`,
+            // fontFamily: `Montserrat, sans-serif`,
             marginTop: 0,
           }}
         >
@@ -56,20 +61,21 @@ class Layout extends React.Component {
     return (
       <Wrapper>
         <div
+          className= {styles.layout_wrapper}
           style={{
             marginLeft: `auto`,
             marginRight: `auto`,
-            maxWidth: rhythm(24),
+            // maxWidth: rhythm(24),
             padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
           }}
         >
-          <header>{header}</header>
+          {/* <header>{header}</header> */}
+          <Header></Header>
+          <SocialMenu></SocialMenu>
+          <SubMenu title={this.props.subMenu.title} linkArray={this.props.subMenu.links}></SubMenu>
           <main>{children}</main>
         </div>
         <Footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
         </Footer>
       </Wrapper>
     )

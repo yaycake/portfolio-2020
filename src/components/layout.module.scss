@@ -1,0 +1,8 @@
+@import '../styles/styles';
+
+.layout-wrapper {
+    @include desktop {
+        display: grid; 
+        grid-template-columns: repeat (5, 1fr);
+    }
+}
