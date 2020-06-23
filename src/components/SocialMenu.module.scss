@@ -2,10 +2,20 @@
 
 .socialMenu {
     list-style: none; 
- 
+    display: none;
+    @include desktop {
+        display: block; 
+        position: fixed; 
+        left: 80px; 
+        top: 50vh;
+    }
 }
 
 .socialMenu__item {
-    display: inline-block; 
+    background-color: black; 
+    border-radius: 50%; 
+    width: 28px; 
+    height: 28px; 
+    margin-bottom: 30px; 
 }
 

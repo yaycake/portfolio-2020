@@ -1,0 +1,25 @@
+@import '../styles/styles';
+
+.footer_section_wrapper{
+    @include flex_column;
+    justify-content: center; 
+    align-items: center;  
+    
+    @include desktop {
+        @include flex_row; 
+        justify-content: space-around;
+    }
+}
+
+.footer_section {
+    display: none; 
+    @include desktop {
+        display: block
+    }
+}
+
+.footer_bottom {
+    margin-top: 2rem;
+    text-align: center; 
+    margin-bottom: 3rem; 
+}

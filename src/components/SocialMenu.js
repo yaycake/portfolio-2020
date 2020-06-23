@@ -6,10 +6,9 @@ import styles from './SocialMenu.module.scss'
 const SocialMenu = () => {
     return (
         <ul className={styles.socialMenu}>
-            <li className={styles.socialMenu__item}>Github</li>
-            <li className={styles.socialMenu__item}>LinkedIn</li>
-            <li className={styles.socialMenu__item}>Resume</li>
-            <li className={styles.socialMenu__item}>Email</li>
+            <li className={styles.socialMenu__item}></li>
+            <li className={styles.socialMenu__item}></li>
+            <li className={styles.socialMenu__item}></li>
         </ul>
     )
 }

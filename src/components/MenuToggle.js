@@ -3,12 +3,8 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import styles from './MenuToggle.module.scss'
 
-const MenuToggle = () => (
-    <div>
-        {/* <h3
-            class= {styles.header__menuToggle}
-        >MENU</h3> */}
-
+const MenuToggle = ({clicked}) => (
+    <div onClick={clicked} className={styles.header__menuToggle}>
         <div className={[styles.x, styles.x1].join(' ')}></div>
         <div className={[styles.x, styles.x2].join(' ')}> </div>
     </div>

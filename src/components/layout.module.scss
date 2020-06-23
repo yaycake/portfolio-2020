@@ -1,8 +1,17 @@
 @import '../styles/styles';
 
-.layout-wrapper {
+.layout_wrapper {
+  
     @include desktop {
-        display: grid; 
-        grid-template-columns: repeat (5, 1fr);
+    
+    }
+}
+
+.main_wrapper {
+    width: 90%; 
+    border: 1px solid pink; 
+    margin: 0 auto; 
+    @include desktop {
+        width: 80%; 
     }
 }
