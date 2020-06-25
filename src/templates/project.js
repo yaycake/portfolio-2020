@@ -5,7 +5,6 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
 
 class ProjectTemplate extends React.Component {
   render() {
@@ -29,10 +28,10 @@ class ProjectTemplate extends React.Component {
        {console.log(post.frontmatter)}
         <p
           style={{
-            ...scale(-1 / 5),
+            // ...scale(-1 / 5),
             display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
+            // marginBottom: rhythm(1),
+            // marginTop: rhythm(-1),
           }}
         >
           {post.frontmatter.date}
@@ -42,7 +41,7 @@ class ProjectTemplate extends React.Component {
           </MDXRenderer>
         <hr
           style={{
-            marginBottom: rhythm(1),
+            // marginBottom: rhythm(1),
           }}
         />
         

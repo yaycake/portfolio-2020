@@ -1,4 +1,4 @@
 // custom typefaces
 // import "typeface-montserrat"
-import "typeface-merriweather"
-// import "typeface-lexend-deca"
+// import "typeface-merriweather"
+import "typeface-lexend-deca"

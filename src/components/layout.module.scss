@@ -9,9 +9,10 @@
 
 .main_wrapper {
     width: 90%; 
-    border: 1px solid pink; 
+    // border: 1px solid pink; 
     margin: 0 auto; 
     @include desktop {
         width: 80%; 
+        max-width: 1200px; 
     }
 }

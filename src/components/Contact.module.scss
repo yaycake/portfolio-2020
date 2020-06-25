@@ -1,0 +1,24 @@
+
+@import '../styles/styles';
+
+
+.index_section {
+    min-height: 40vh; 
+    border: 2px dashed orange; 
+    padding: 10%;
+
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.contact_text {
+  @include section_text;
+
+    h2 {
+        margin-top: 0;
+    }
+}
+
+.contact_action {
+    margin-top: 0; 
+}

@@ -1,0 +1,13 @@
+@import '../styles/styles';
+
+.project_tiles_wrapper {
+    @include flex_row;
+    justify-content: space-between; 
+    
+    padding: 5%; 
+    width: 80%; 
+    max-width: 1200px; 
+    border: 1px solid blue; 
+    margin: 0 auto; 
+   
+}

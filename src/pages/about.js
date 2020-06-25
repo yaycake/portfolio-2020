@@ -4,13 +4,54 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
-import styles from "./index.module.scss"; 
+import styles from "./about.module.scss"; 
 
-const IndexPage = (props) => {
+import Me from "../images/me.png"
+
+import Contact from "../components/Contact"
+
+const AboutPage = (props) => {
+  
   const siteTitle = "Grace | Design & Code"
-  return (
-      <Layout  location={this.props.location} title={siteTitle} subMenu = { {title: "Projects"}}>
 
+  return (
+      <Layout  location={props.location} title={siteTitle}>
+        <h1 className={styles.page_title}>Meet Me</h1>
+
+        <div className={styles.about_banner_wrapper}>
+
+          <div 
+            className={styles.about_banner_image}
+            style={ {background: `url(${Me})` } }
+            >
+          </div>
+
+          <div className={styles.about_banner_text}>
+            <div>
+              <h3>Loves</h3>
+              <p> Healthy ankles, healthy ankles, healthy ankles</p>
+            </div>
+            <div>
+              <h3>Currently</h3>
+              <p>Looking for new projects, teams, and opportunities</p>
+            </div>
+          </div>
+
+        </div>
+
+        <section>
+          <h3>
+            My digital design and front end development skills are at your service: from product development to innovating your brand’s user digital experience .
+          </h3>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        </section>
+
+        <Contact></Contact>
+        
       </Layout>
   )
 }
+
+export default AboutPage; 

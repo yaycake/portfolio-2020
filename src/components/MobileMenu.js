@@ -7,11 +7,14 @@ const MobileMenu = ({showMenu, clicked}) => {
 
     return (
         <div className={styles.mobileMenu}
-            style={ showMenu ? {display: `block`} : {display: `none`}}>
+            style={ showMenu ? { display: `block` } : { display: `none` }}>
+            
             <div onClick={clicked}> CLOSE MENU</div>
-            <Link>Home</Link>
-            <Link>Projects</Link>
-            <Link>Diary</Link>
+            
+            <Link to="/">Home</Link>
+            <Link to="/projects">Projects</Link>
+            <Link to="/diary">Diary</Link>
+            <Link to="/about">About</Link>
         </div>
     )
 };

@@ -1,10 +1,9 @@
 @import '../styles/styles';
 
 .index_section {
-    min-height: 60vh; 
-    width: 100%;
-    border: 2px dashed orange; 
-    padding: 10%;
+    min-height: 50vh; 
+    // border: 2px dashed orange; 
+    padding: 5%;
 }
 
 .index_section_title {
@@ -14,8 +13,14 @@
 .banner {
     display: flex;
     flex-direction: column; 
-    align-items: center;
-    justify-content:center; 
+    align-items: left;
+    justify-content:left; 
+    
+    @include desktop {
+        align-items: center;
+        justify-content:center; 
+
+    }
 }
 
 .landing__greeting {
@@ -28,58 +33,59 @@
 .banner_landing__text {
     line-height: 2rem; 
     width: 90%;
-    text-align: center;
+    text-align: left;
     @include desktop {
         width: 70%;
+        text-align: center;
     }
 }
 
 .banner_landing__button {
     border-radius: 3rem; 
-    height: 2.5rem;
-}
-
-.index_about {
-    display: flex; 
-    flex-direction: column; 
-    justify-content: space-between;
-    padding: 10%;
-   
+    height: 3rem;
+    padding: 20px 30px; 
     @include desktop {
-        flex-direction: row;
-        align-items: center; 
-        align-content: center; 
-        div {
-         
-        } 
-        
+       
     }
 }
 
-.index_about__imagewrap {
-   
-    border: 1px solid blue;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;;
-    
-}
 
 .index_about_image {
     background-color: gray; 
     border-radius: 50%; 
-    width: 230px; 
-    height: 230px; 
-    border: 2px solid purple; 
+    width: 250px; 
+    height: 250px; 
+    margin-top: 2rem;
+    margin: 0 auto;
+    @include desktop {
+        position: absolute; 
+        top: 150px;
+        right: 0; 
+        left: 0; 
+        bottom: 0; 
+    }
 }
 
-.index_about__textwrap {
 
-   @include desktop {
-    width: 50%;
-    padding: 2rem;
-   }
+.index_projects_header {
+    display: flex; 
+    justify-content: space-between;
+    align-items: baseline
+}
+
+.index_projects_action_desktop {
+    display: none; 
+    @include desktop {
+        display: block;
+    }
+}
+
+.index_projects_action_mobile {
+    display: block;
+    text-align: right; 
+    @include desktop {
+        display: none; 
+    }
 }
 
 .index_projects__grid {
@@ -104,7 +110,6 @@
 
 .index_projects__grid__project1 {
     width: 100%; 
-    
     background-color: burlywood;
     @include desktop {
         grid-column: 1 / span 2; 
@@ -114,8 +119,6 @@
 
 .index_projects__grid__project2{
     width: 100%; 
-    
-
     background-color: purple;
     grid-column: 1 / span 1; 
     grid-row: 2/span 1; 
@@ -130,9 +133,7 @@
 }
 .index_notes_container {
     display: flex; 
-  
     width: 100%;
-
 }
 
 

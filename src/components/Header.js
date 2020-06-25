@@ -6,19 +6,20 @@ import MobileMenu from "./MobileMenu"
 import styles from './Header.module.scss'
 
 const Header = ({children}) => (
-    <div className={styles.header}>
-        <h3 className={styles.header__logo}><Link to="/">Grace Yang</Link></h3>
+    <header className={styles.header}>
+        <h1 className={styles.header__logo}><Link to="/">Grace Yang</Link></h1>
         <ul className={styles.header__navlinks}>
             <li> <Link to="/projects/"><h4>Projects </h4></Link></li>
             <li> <Link to="/diary"><h4>Diary</h4></Link> </li>
             <li> <Link to=""><h4>Contact</h4></Link> </li>
+            <li> <Link to="/about"><h4>About</h4></Link> </li>
         </ul>
         {children}
         {/* <MenuToggle></MenuToggle>
         <MobileMenu></MobileMenu> */}
         <div className={styles.header__email}></div>
         
-    </div>
+    </header>
 )
 
 export default Header; 

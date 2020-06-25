@@ -25,6 +25,21 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-feed-mdx`,
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Lexend Deca`,
+            variants: [`400`]
+          },
+          {
+            family: `Roboto`,
+            subsets: [`latin`]
+          },
+        ],
+      },
+    },
     
     {
       resolve: 'gatsby-plugin-sass', 
@@ -124,12 +139,6 @@ module.exports = {
         // edit below
         icon: `content/assets/gatsby-icon.png`,
       },
-    },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
+    }
   ],
 }

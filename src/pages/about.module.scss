@@ -1,0 +1,26 @@
+@import '../styles/styles';
+
+.page_title {
+    @include page_title
+}
+
+.about_banner_wrapper{
+    display: flex; 
+
+}
+
+.about_banner_image {
+    width: 60%; 
+
+}
+
+.about_banner_text { 
+    border: 1px solid white; 
+    width: 40%; 
+    height: 500px; 
+    padding: 2rem; 
+
+    background-color: black; 
+    color: white; 
+}
+

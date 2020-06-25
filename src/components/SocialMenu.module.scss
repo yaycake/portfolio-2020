@@ -6,16 +6,23 @@
     @include desktop {
         display: block; 
         position: fixed; 
-        left: 80px; 
+        left: 30px; 
         top: 50vh;
     }
 }
 
 .socialMenu__item {
-    background-color: black; 
+
     border-radius: 50%; 
-    width: 28px; 
-    height: 28px; 
-    margin-bottom: 30px; 
+   
+    margin-bottom: 50px; 
 }
 
+.social_icons {
+  width: 28px;
+  transition: all .15s ease-in-out; 
+}
+
+.social_icons:hover {
+    transform: scale(1.1)
+}
