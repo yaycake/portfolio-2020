@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Section from "../components/Section"
 import Button from "../components/button"
 import styles from "./about.module.scss"; 
 
@@ -48,7 +49,12 @@ const AboutPage = (props) => {
 
         </section>
 
-        <Contact></Contact>
+        <Section 
+          title="Contact Me" 
+          action="Let's Chat" 
+          link="/about" 
+          text="If you’ve got a great idea or would like to chat about a unique opportunity, contact me.">
+        </Section> 
         
       </Layout>
   )

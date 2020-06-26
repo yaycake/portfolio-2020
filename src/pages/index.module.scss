@@ -95,6 +95,7 @@
     div {
         height: 40vh; 
         margin-bottom: 2rem;
+        min-height: 300px; 
     }
     @include desktop {
         display: grid;

@@ -5,19 +5,27 @@
 }
 
 .about_banner_wrapper{
-    display: flex; 
+    @include flex_column;
+
+    align-content: center;
+  
+
+    @include desktop {
+        @include flex_row; 
+        height: 500px;
+        margin-bottom: 5rem; 
+    }
 
 }
 
 .about_banner_image {
-    width: 60%; 
+    width: 70%; 
 
 }
 
 .about_banner_text { 
-    border: 1px solid white; 
-    width: 40%; 
-    height: 500px; 
+    width: 30%; 
+
     padding: 2rem; 
 
     background-color: black; 

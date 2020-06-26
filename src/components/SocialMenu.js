@@ -12,7 +12,7 @@ const SocialMenu = () => {
         <ul className={styles.socialMenu}>
             <li className={styles.socialMenu__item}><a href="https://github.com/yaycake"><img className={styles.social_icons} src={Github}></img></a></li>
             <li className={styles.socialMenu__item}><a href="https://www.linkedin.com/in/ygrace/"><img className={styles.social_icons} src={Linkedin}></img></a></li>
-            <li className={styles.socialMenu__item}><a href="/resume"><img className={styles.social_icons} src={Resume}></img></a></li>
+            <li className={styles.socialMenu__item}><Link to="/resume"><img className={styles.social_icons} src={Resume}></img></Link></li>
         </ul>
     )
 }

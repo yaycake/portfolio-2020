@@ -1,13 +1,17 @@
 @import '../styles/styles';
-
+.page_title {
+    @include page_title
+}
 .project_tiles_wrapper {
     @include flex_row;
-    justify-content: space-between; 
-    
-    padding: 5%; 
-    width: 80%; 
+    justify-content: center; 
+    flex-wrap: wrap;
+    padding: 0 5%; 
     max-width: 1200px; 
-    border: 1px solid blue; 
     margin: 0 auto; 
+
+    @include desktop {
+        justify-content: space-between;
+    }
    
 }

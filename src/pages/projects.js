@@ -58,7 +58,7 @@ class Project extends React.Component {
       <Layout location={this.props.location} title={siteTitle} subMenu = { {title: "Projects"}}>
         
         <SEO title="All posts" />
-       
+        <h1 className={styles.page_title}>Projects</h1>
         <div className={styles.project_tiles_wrapper}>
           { projectTiles }
             

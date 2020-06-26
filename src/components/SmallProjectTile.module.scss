@@ -2,8 +2,14 @@
 
 .tile_wrapper {
     @include flex_column; 
+    min-width: 250px; 
+    margin-top: 3rem; 
+   
+    
     @include desktop {
         width: 48%;
+        min-width: 300px; 
+   
     }
 }
 

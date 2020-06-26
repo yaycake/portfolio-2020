@@ -2,9 +2,12 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import Bio from "../components/bio"
+import Image from "gatsby-image"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+import styles from "./project.module.scss"
 
 class ProjectTemplate extends React.Component {
   render() {
@@ -23,49 +26,59 @@ class ProjectTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <img src={post.frontmatter.featuredImage}/>
-        <h1>{post.frontmatter.title}</h1>
-       {console.log(post.frontmatter)}
-        <p
-          style={{
-            // ...scale(-1 / 5),
-            display: `block`,
-            // marginBottom: rhythm(1),
-            // marginTop: rhythm(-1),
-          }}
-        >
-          {post.frontmatter.date}
-        </p>
+
+        <h1 className={styles.page_title}>{post.frontmatter.title}</h1>
+
+        <div className={styles.project_banner_wrapper}>
+
+          <Image className={styles.project_featured_image} fluid ={post.frontmatter.featuredImage.childImageSharp.fluid }></Image>
+
+          <div className={styles.project_banner_text}>
+              <h3> { post.frontmatter.category } Category </h3>
+              <p>{ post.frontmatter.engagement_period }</p>
+              <div>
+                <h3>Skills</h3>
+                <p> { post.frontmatter.skills }</p>
+              </div>
+              <div>
+                <h3>Tools</h3>
+                <p>{ post.frontmatter.tools }</p>
+              </div>
+            </div>
+        </div>
+
+        
+       
+      
+        {/* <p> {post.frontmatter.date} </p> */}
         <MDXRenderer>
           {post.body}
           </MDXRenderer>
-        <hr
-          style={{
-            // marginBottom: rhythm(1),
-          }}
-        />
+
+        <hr className={styles.divider}/>
         
 
-        <ul
+        <ul className={styles.previous_next_links}
           style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
+         
           }}
         >
           <li>
             {previous && (
               <Link to={`project${previous.fields.slug}`} rel="prev">
+                <h3>
                 ← {previous.frontmatter.title}
+                </h3>
               </Link>
             )}
           </li>
+          
           <li>
             {next && (
               <Link to={`project${next.frontmatter.path}`} rel="next">
+                <h3>
                 {next.frontmatter.title} →
+                </h3>
               </Link>
             )}
           </li>
@@ -91,8 +104,19 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
+        skills
+        engagement_period
+        tools
+        category
         date(formatString: "MMMM DD, YYYY")
         description
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
