@@ -110,6 +110,7 @@ export const pageQuery = graphql`
         category
         date(formatString: "MMMM DD, YYYY")
         description
+        
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 800) {
@@ -117,6 +118,9 @@ export const pageQuery = graphql`
             }
           }
         }
+
+
+
       }
     }
   }
