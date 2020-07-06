@@ -13,19 +13,19 @@ description: A WeChat Mini Program to help you find new restaurants in the neigh
 
 Yaochima is a WeChat Mini Program that helps you discover, explore, and find local Chengdu eats with a few shakes of your phone.
 
-![discover](../images/yao_1.png)
+![yaochima mini program](/assets/yao_1-3fcdac514ac18a02294910cdd5cd9f42.png "Yaochima Mini Program Screenshot")
 
 #### The Opportunity
 
 Local Chinese apps like Dianping or Meituan overwhelm users with endless and infinite possibilities of where to eat. In a city like Chengdu, where it's easy to drown in hot-pot or skewers, Yaochima helps free you from the paradox of choice.
 
-![dianping](/assets/yao_1-3fcdac514ac18a02294910cdd5cd9f42.png)
+![dianping](/assets/yao_2-f6599a7c7814e108c91b985541fe5408.png "Dianping & Meituan Food Delivery Apps")
 
 #### The Design
 
 To eliminate the panic that accompanies the paradox of choice, the UX encouraged a simple "yes or no" attitude from the user by allowing them to consider a restaurant option in itself (vs. comparing one hot pot restaurant to ten other very similar hot pot restaurants).
 
-![yao_icons](../images/yao_3.png)
+![Yaochima Icon Design](/assets/yao_3-6bd54212d671ba8324727c526275bf5e.png "Yaochima Icon Design")
 
 The UI + 'shake' effect boosted the 'friendliness' of the app-- an encouragement to play and try new neighborhood spots. This is a direct contrast to the overwhelming amount of options and information a customer sees on the typical Chinese restaurant review platforms.
 
@@ -43,16 +43,16 @@ Figuring out categories and cuisines (and how to scrape, store and use them) was
 
 The inconsistent quality of images on Dianping was a design challenge I took the edge off with the creative brand experience of the Mini Program.
 
-![share](../images/yao_5.png)
+![Yaochima Share icons](/assets/yao_5-4719975801dd3f7bc814967110f51c48.png "Yaochima share icons")
 
 #### Local Spice
 
 To localize our mini program idea, we recorded, edited, and added Sichuan exclamations to accompany each shake.
 
-![sound](../images/yao_6.jpeg)
+![Yaochima local sound effects](/assets/yao_6-c6dded252bf5b18608ce8cbb47ca708b.jpeg "Yaochima local sound effects")
 
 #### Le Wagon Batch #114 Final Project
 
-![whiteboard](../images/yao_4.png)
+![Yaochima Whiteboard](/assets/yao_4-2f935468fd2cbfb97f7fd5772d2cf352.png "Yaochima Whiteboard")
 
 Yaochima was my final project. Team members include Fabien Martin (founder of WePlusMinus) and Alina Kabirova (fullstack developer).
