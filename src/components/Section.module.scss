@@ -29,13 +29,14 @@
 }
 
 .section_title {
-    max-width: 200px; 
+    // max-width: 200px; 
 }
 
 .section_text {
+    margin-left: 10%;
     @include desktop {
         width: 40%;
-        max-width: 250px; 
+        // max-width: 250px; 
        }
 }
 

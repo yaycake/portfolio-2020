@@ -27,6 +27,8 @@ const AboutPage = (props) => {
             >
           </div>
 
+          
+
           <div className={styles.about_banner_text}>
             <div>
               <h3>Loves</h3>

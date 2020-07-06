@@ -28,7 +28,7 @@ const IndexPage = (props) => {
         <h1 className={styles.banner_landing__greeting}>
           I design &amp; code.
         </h1>
-        <p className={styles.banner_landing__text}> I help people move their brand and products into the future. <br /> Got an idea?</p>
+        <h3 className={styles.banner_landing__text}> I help people move their brand and products into the future. <br /> Got an idea?</h3>
         <Link to="/projects/">
           <Button className={styles.banner_landing__button} marginTop="3rem">Contact Me</Button>
         </Link>
@@ -40,7 +40,7 @@ const IndexPage = (props) => {
         action="More About Me" 
         link="/about" 
         text="My digital design and front end development skills are at your service: from product development to innovating your brand’s user digital experience .">
-          <img className={styles.index_about_image} src={Corgis} />
+          {/* <img className={styles.index_about_image} src={Corgis} /> */}
       </Section> 
 
       <div className={[styles.index_projects, styles.index_section].join(' ')}>

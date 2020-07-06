@@ -3,7 +3,7 @@
     @include page_title
 }
 .project_tiles_wrapper {
-    @include flex_row;
+    @include flex_column; 
     justify-content: center; 
     flex-wrap: wrap;
     padding: 0 5%; 
@@ -11,6 +11,7 @@
     margin: 0 auto; 
 
     @include desktop {
+        @include flex_row;
         justify-content: space-between;
     }
    

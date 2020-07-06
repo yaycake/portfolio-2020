@@ -20,8 +20,6 @@ class Project extends React.Component {
     const projectTiles = projects.map(({ node }) => {
       const title = node.frontmatter.title || node.fields.slug
 
-      
-
       return (
         <SmallProjectTile 
           title = {title}
@@ -60,7 +58,7 @@ class Project extends React.Component {
         <SEO title="All posts" />
         <h1 className={styles.page_title}>Projects</h1>
         <div className={styles.project_tiles_wrapper}>
-          { projectTiles }
+          { projectTiles && projectTiles }
             
         </div>
 

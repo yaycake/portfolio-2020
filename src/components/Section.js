@@ -12,15 +12,15 @@ const Section = ({title, action, link, text, children}) => {
                 <h2 className={styles.section_title}>{ title }</h2>
                 <h4 className={styles.section_action_desktop}><a href={ link }>{ action } &#8594;</a></h4>
             </div>
-            <p className={styles.section_text}>
+            <h3 className={styles.section_text}>
                 { text }
-            </p>
+            </h3>
 
             {/* <div className={styles.section_image_child}> */}
                 {children}
             {/* </div> */}
 
-            <h4 className={styles.section_action_mobile}><a href={ link }>{ action } &#8594;</a></h4>
+            <h3 className={styles.section_action_mobile}><a href={ link }>{ action } &#8594;</a></h3>
 
         </section>
     )
