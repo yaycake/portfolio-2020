@@ -9,7 +9,6 @@ tools: Sketch, Figma, Invision, WeChat IDE
 engagement_period: " November 2018 to December 2018"
 description: A WeChat Mini Program to help you find new restaurants in the neighborhood.
 ---
-
 #### Discover Places To Eat
 
 Yaochima is a WeChat Mini Program that helps you discover, explore, and find local Chengdu eats with a few shakes of your phone.
@@ -20,7 +19,7 @@ Yaochima is a WeChat Mini Program that helps you discover, explore, and find loc
 
 Local Chinese apps like Dianping or Meituan overwhelm users with endless and infinite possibilities of where to eat. In a city like Chengdu, where it's easy to drown in hot-pot or skewers, Yaochima helps free you from the paradox of choice.
 
-![dianping](../images/yao_2.png)
+![dianping](/assets/yao_1-3fcdac514ac18a02294910cdd5cd9f42.png)
 
 #### The Design
 
