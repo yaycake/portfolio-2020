@@ -1,82 +1,24 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-import Image from "gatsby-image"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import SmallProjectTile from '../components/SmallProjectTile'
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import Button from "../components/button"
-
 import styles from "./projects.module.scss"
 
-class Project extends React.Component {
-  render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const projects = data.allMdx.edges
 
-    const projectTiles = projects.map(({ node }) => {
-      const title = node.frontmatter.title || node.fields.slug
 
-      return (
-        <SmallProjectTile 
-          title = {title}
-          path = {node.frontmatter.path}
-          featuredImage = { node.frontmatter.featuredImage.childImageSharp.fluid }
-          slug = { `project${node.fields.slug}`}
-          category = "category"
-      
-        ></SmallProjectTile>
-        // <div key={node.frontmatter.path}>
-        //   <Image fluid ={node.frontmatter.featuredImage.childImageSharp.fluid}></Image>
+const Projects = (props) => {
 
-        //   <h3>
-        //     <Link
-        //       style={{ boxShadow: `none` }}
-        //       to={`project${node.fields.slug}`}
-        //      >
-        //       {title}
-        //     </Link>
-            
-        //   </h3>
-        //   <small>{node.frontmatter.date}</small>
-        //   <p
-        //     dangerouslySetInnerHTML={{
-        //       __html: node.frontmatter.description || node.excerpt,
-        //     }}
-        //   />
-        // </div>
-      )
-
-    })
-
-    return (
-      <Layout location={this.props.location} title={siteTitle} subMenu = { {title: "Projects"}}>
-        
-        <SEO title="All posts" />
-        <h1 className={styles.page_title}>Projects</h1>
-        <div className={styles.project_tiles_wrapper}>
-          { projectTiles && projectTiles }
-            
-        </div>
-
-      </Layout>
-    )
-  }
-}
-
-export default Project
-
-export const pageQuery = graphql`
+  const data = useStaticQuery(graphql`
   query {
     site {
       siteMetadata {
         title
       }
     }
-    allMdx (sort: { fields: [frontmatter___date], order: DESC }){
+    allMdx {
       edges {
         node {
           excerpt
@@ -93,9 +35,6 @@ export const pageQuery = graphql`
                 }
               }
             }
- 
-
-
             title
             description
           }
@@ -103,7 +42,82 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`)
+  // const { data } = props
+  const projectsData = data.allMdx.edges
+  const siteTitle = data.site.siteMetadata.title
+
+
+  
+   
+
+    
+
+    const projectTiles = projectsData.map(({ node }) => {
+      const title = node.frontmatter.title || node.fields.slug
+
+      return (
+        <SmallProjectTile 
+          title = {title}
+          path = {node.frontmatter.path}
+          featuredImage = { node.frontmatter.featuredImage.childImageSharp.fluid }
+          slug = { `project${node.fields.slug}`}
+          category = "category"
+      
+        ></SmallProjectTile>
+      )
+
+    })
+
+    return (
+      <Layout location={props.location} title={siteTitle} subMenu = { {title: "Projects"}}>
+        
+        <SEO title="All posts" />
+        <h1 className={styles.page_title}>Projects</h1>
+        <div className={styles.project_tiles_wrapper}>
+          { projectTiles && projectTiles }
+            
+        </div>
+
+      </Layout>
+    )
+  }
+
+
+export default Projects
+
+// export const pageQuery = graphql`
+//   query {
+//     site {
+//       siteMetadata {
+//         title
+//       }
+//     }
+//     allMdx (sort: { fields: [frontmatter___date], order: DESC }){
+//       edges {
+//         node {
+//           excerpt
+//           fields {
+//             slug
+//           }
+//           frontmatter {
+//             date(formatString: "MMMM DD, YYYY")
+
+//             featuredImage {
+//               childImageSharp {
+//                 fluid(maxWidth: 800) {
+//                   ...GatsbyImageSharpFluid
+//                 }
+//               }
+//             }
+//             title
+//             description
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
 
 // export const pageQuery = graphql`
