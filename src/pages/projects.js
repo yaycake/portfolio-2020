@@ -18,7 +18,7 @@ const Projects = (props) => {
         title
       }
     }
-    allMdx {
+    allMdx (sort: { fields: [frontmatter___date], order: DESC }){
       edges {
         node {
           excerpt
