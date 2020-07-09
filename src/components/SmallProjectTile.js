@@ -5,24 +5,23 @@ import styles from './SmallProjectTile.module.scss'
 import Image from "gatsby-image"
 
 const SmallProjectTile = ({title, path, featuredImage, slug, category }) => {
+
+    console.log("category:")
+    console.log(category)
+
     return (
         
             <div className={styles.tile_wrapper}>
                 <Link to={ slug }>
-
                     <Image className={styles.tile_image} fluid ={featuredImage }></Image>
-
                     <div className={styles.tile_text}>
                         <small className={styles.tile_category}> { category } </small>
                         <h3 className={styles.tile_title}>
                             { title }
                         </h3>
-
                     </div>
                 </Link>
             </div>
-       
-
     )
 }
 

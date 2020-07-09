@@ -37,6 +37,7 @@ const Projects = (props) => {
             }
             title
             description
+            category
           }
         }
       }
@@ -62,8 +63,7 @@ const Projects = (props) => {
           path = {node.frontmatter.path}
           featuredImage = { node.frontmatter.featuredImage.childImageSharp.fluid }
           slug = { `project${node.fields.slug}`}
-          category = "category"
-      
+          category = {node.frontmatter.category}
         ></SmallProjectTile>
       )
 
