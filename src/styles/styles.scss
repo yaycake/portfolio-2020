@@ -12,6 +12,9 @@ $light-highlight: #E6FF8D;
     font-family: 'Lexend Deca', sans-serif;
 }
 
+@mixin serif { 
+    font-family: 'merriweather'
+}
 // @import 'typeface-lexend-deca';
 
 // $primary-font: 'lexend-deca';

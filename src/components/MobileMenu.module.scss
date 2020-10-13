@@ -2,20 +2,41 @@
 
 .mobileMenu {
     // display: none; 
+    text-align: center; 
     height: 100vh;
     position: fixed; 
     z-index: 3; 
     width: 100vw; 
-    border:2px solid purple; 
     right: 0px; 
     background-color: white; 
     flex-direction: column; 
     justify-content: center; 
+    @include sansSerif;
+    font-size:36px;
     a { 
-        font-size: 36px; 
-        @include sansSerif
+        margin-bottom: 2rem; 
+        display: flex; 
+        flex-direction: column;
+    }
+    div { 
+        margin-bottom: 2rem; 
     }
 }
+
+.linkLabel {
+    opacity: 0; 
+}
+
+a:hover { 
+    .linkLabel { 
+        // @include serif; 
+        font-size: 16px; 
+        letter-spacing: .5px; 
+        opacity: .6
+        // font-style: oblique; 
+    }
+}
+
 
 
 
