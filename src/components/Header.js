@@ -16,8 +16,6 @@ const Header = ({children}) => (
             <li> <Link to="/about"><h4>About</h4></Link> </li>
         </ul>
         {children}
-        {/* <MenuToggle></MenuToggle>
-        <MobileMenu></MobileMenu> */}
         <div className={styles.header__email}></div>
         
     </header>

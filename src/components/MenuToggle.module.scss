@@ -5,13 +5,14 @@
     display: block; 
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
-    border:3px solid orange; 
+    border-radius: 2px; 
     height: 30px;
     width: 30px;
     position: absolute; 
     z-index: 4; 
     top: 2rem; 
     right: 2rem; 
+    background-color: black; 
 
     cursor: pointer;
 
@@ -25,13 +26,21 @@
 }
 
 .x {
-    height: 2px; 
-    width: 31px; 
-    background-color: $first-dark;
+    // height: 2px; 
+    // width: 31px; 
+    // background-color: $first-dark;
+    margin: 0 auto;
 }
 
 .x1 {
-    transform: rotate(90deg);
+    // transform: rotate(90deg);
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    
+    border-top: 10px solid #fff;
+    margin-top: 10px; 
 }
 
 .x2 {
