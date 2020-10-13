@@ -8,8 +8,6 @@ const MobileMenu = ({showMenu, clicked}) => {
     return (
         <div className={styles.mobileMenu}
             style={ showMenu ? { display: `flex` } : { display: `none` }}>
-            
-            <div onClick={clicked}> Hello, I'm Grace</div>
 
             <Link to="/">
                 <span className={styles.linkLabel}>Go</span> 
@@ -23,7 +21,7 @@ const MobileMenu = ({showMenu, clicked}) => {
            
             <Link to="/projects">
                 <span className={styles.linkLabel}>Read My</span> 
-                Diary
+                Blog
             </Link>
             <Link to="/about">
                 <span className={styles.linkLabel}> Learn </span>

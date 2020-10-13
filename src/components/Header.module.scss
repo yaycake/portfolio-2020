@@ -20,7 +20,8 @@
     position: absolute; 
     left: 1rem;
     font-size: 36px; 
-    font-family: 'merriweather'
+    width: 210px;
+    z-index: 5; 
     a {
         color: $first-dark;
     }

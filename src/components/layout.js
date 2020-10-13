@@ -24,11 +24,22 @@ const Layout = (props) => {
   const clickMenuHandler = () => {
     if (showMenu == true){
       setMenu(false)
+    
     } else {
       setMenu(true)
     }
+    document.getElementsByTagName('body')[0].classList.toggle(styles.noscroll);
     console.log(`showMenu: ${showMenu}`)
   };
+
+//  if (showMenu) {
+//    console.log("Stop scroll!")
+//    document.getElementsByTagName('body')[0].
+//    console.log(document.getElementsByTagName('body')[0])
+//  } else { 
+//    console.log("Scroll!")
+//   //  document.getElementsByTagName('body')[0].style.overflow('auto')
+//  }
 
   // const clickMenuHandler = () => {
 
@@ -91,8 +102,8 @@ const Layout = (props) => {
           }}
         >
           {/* <header>{header}</header> */}
-          <Header>
-            <MenuToggle clicked={clickMenuHandler}></MenuToggle>
+          <Header showMenu = {showMenu}>
+            <MenuToggle showMenu = {showMenu} clicked={clickMenuHandler}></MenuToggle>
           </Header>
           
           <SocialMenu></SocialMenu>
