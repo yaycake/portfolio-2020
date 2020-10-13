@@ -6,6 +6,15 @@ $first-light: #EFEFEF;
 $second-light: #7CE6D2;
 $light-highlight: #E6FF8D;
 
+
+
+@mixin sansSerif { 
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+@mixin serif { 
+    font-family: 'merriweather'
+}
 // @import 'typeface-lexend-deca';
 
 // $primary-font: 'lexend-deca';
@@ -59,6 +68,10 @@ $light-highlight: #E6FF8D;
 
 html {
     
+}
+
+body { 
+    margin: 0
 }
 
 small {
