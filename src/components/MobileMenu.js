@@ -7,9 +7,9 @@ const MobileMenu = ({showMenu, clicked}) => {
 
     return (
         <div className={styles.mobileMenu}
-            style={ showMenu ? { display: `block` } : { display: `none` }}>
+            style={ showMenu ? { display: `flex` } : { display: `none` }}>
             
-            <div onClick={clicked}> CLOSE MENU</div>
+            {/* <div onClick={clicked}> CLOSE MENU</div> */}
             
             <Link to="/">Home</Link>
             <Link to="/projects">Projects</Link>

@@ -1,7 +1,7 @@
 @import '../styles/styles';
 
 .mobileMenu {
-    display: none; 
+    // display: none; 
     height: 100vh;
     position: fixed; 
     z-index: 3; 
@@ -9,5 +9,14 @@
     border:2px solid purple; 
     right: 0px; 
     background-color: white; 
+    flex-direction: column; 
+    justify-content: center; 
+    a { 
+        font-size: 36px; 
+        @include sansSerif
+    }
 }
+
+
+
 
