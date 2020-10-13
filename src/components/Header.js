@@ -7,7 +7,7 @@ import styles from './Header.module.scss'
 
 const Header = ({children}) => (
     <header className={styles.header}>
-        <h2 className={styles.header__logo}><Link to="/">Grace Yang</Link></h2>
+        <Link className={styles.header__logo} to="/">Grace Yang</Link>
         <ul className={styles.header__navlinks}>
             <li> <Link to="/projects/"><h4>Projects </h4></Link></li>
             {/* <li> <Link to="/diary"><h4>Dev Diary</h4></Link> </li> */}

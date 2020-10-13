@@ -6,18 +6,21 @@
     display: flex; 
     align-items: center; 
     justify-content: space-between;
-    font-family: 'merriweather';
-    margin-bottom: 5rem; 
+    font-family: 'Lexend Deca', sans-serif;
+    margin-bottom: 1rem; 
 
     @include desktop {
-
+        
         margin-bottom: 10rem; 
+        
     }
 }
 
 .header__logo {
     position: absolute; 
-    left: 3rem; 
+    left: 1rem;
+    font-size: 36px; 
+    font-family: 'merriweather'
     a {
         color: $first-dark;
     }
@@ -26,6 +29,7 @@
     @include desktop {
         // grid-column: 1/span 1; 
         // align-self: end;
+        left: 3rem; 
     }
 }
 
