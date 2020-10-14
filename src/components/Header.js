@@ -4,6 +4,7 @@ import styled from "styled-components"
 import MenuToggle from "./MenuToggle"
 import MobileMenu from "./MobileMenu"
 import styles from './Header.module.scss'
+import emailIcon from "../../content/assets/icon_email.svg"
 
 const Header = ({showMenu, children}) => (
     <header className={styles.header}
@@ -21,7 +22,9 @@ const Header = ({showMenu, children}) => (
             <li> <Link to="/about"><h4>About</h4></Link> </li>
         </ul>
         {children}
-        <div className={styles.header__email}></div>
+        {/* <div className={styles.header__email}></div> */}
+        {/* <a href="mailto:im@thegraceyang.com"><img className={styles.header__email} src={emailIcon}></img></a>
+         */}
         
     </header>
 )
