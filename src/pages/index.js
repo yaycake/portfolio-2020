@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -10,7 +10,15 @@ import Corgis from "../images/corgis.png"
 
 import Section from "../components/Section"
 
+
+
 const IndexPage = (props) => {
+
+  // const data = useStaticQuery(graphql`
+  //   query { 
+  //     allMdx (filter: )
+  //   }
+  // `)
   const siteTitle = "Grace | Design & Code"
 
   return (
