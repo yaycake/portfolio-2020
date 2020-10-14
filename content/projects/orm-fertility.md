@@ -8,6 +8,7 @@ skills: Product design, user interaction design, user experience design, WeChat
   development, front end development
 tools: WXML, WXSS, WeChat components, Ruby on Rails, HTML, CSS, Javascript
 engagement_period: May 2019 to January 2020
+featured?: true
 description: "A WeChat Mini Program and administrative web application for ORM
   Fertility to advertise their services, collect RSVPs for events, and allow
   clients to explore hotspots in Oregon. "

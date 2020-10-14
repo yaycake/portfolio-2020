@@ -8,6 +8,7 @@ skills: HTML, CSS, Javascript, product design sprint, project prototyping, UX
   design, UI design, mentorship
 tools: Sketch, Figma, Invision, Illustrator
 engagement_period: October 2017 to November 2018
+featured?: false
 description: "Product design sprint lead and front-end development teacher for a
   top-ranked fullstack coding bootcamp. "
 ---

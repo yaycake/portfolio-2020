@@ -7,6 +7,7 @@ featuredImage: /assets/screen-shot-2020-10-12-at-7.26.49-pm.png
 skills: Product design, front-end development
 tools: Javascript, HTML, CSS, Sass, GatsbyJS, CurtainsJS, Web Audio API
 engagement_period: July 2020 - September 2020
+featured?: true
 description: "An interactive website to accompany an experimental album release:
   CurtainsJS powers audio visualizations for each track."
 ---

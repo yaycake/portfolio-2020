@@ -7,6 +7,7 @@ featuredImage: /assets/joubanner.png
 skills: UX design, UI design, WeChat MINA (WXML, WXSS), Javascript
 tools: Sketch, WeChat IDE, Illustrator
 engagement_period: February 2019
+featured?: false
 description: "A WeChat Mini Program game to break free of your commute and unlock Chengdu. "
 ---
 #### Hackathon Team Name: 'Code Daddies'

@@ -7,6 +7,7 @@ featuredImage: /assets/yaobanner-88b62b4a933d0c05718c23ddf275b39a.png
 skills: UX design, UI Design, front-end development, WXML, WXSS, HTML, CSS, Javascript
 tools: Sketch, Figma, Invision, WeChat IDE
 engagement_period: " November 2018 to December 2018"
+featured?: false
 description: A WeChat Mini Program to help you find new restaurants in the neighborhood.
 ---
 #### Discover Places To Eat
