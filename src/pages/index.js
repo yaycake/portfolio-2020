@@ -29,7 +29,7 @@ const IndexPage = (props) => {
           I design &amp; code.
         </h1>
         <h3 className={styles.banner_landing__text}> I help people move their brand and products into the future. <br /> Got an idea?</h3>
-        <Link to="/projects/">
+        <Link to="/contact">
           <Button className={styles.banner_landing__button} marginTop="3rem">Contact Me</Button>
         </Link>
       </div>
@@ -62,27 +62,9 @@ const IndexPage = (props) => {
       <Section 
         title="Contact Me" 
         action="Let's Chat" 
-        link="/about" 
+        link="/contact" 
         text="If you’ve got a great idea or would like to chat about a unique opportunity, contact me.">
       </Section> 
-
-      {/* <div className={[styles.index_notes, styles.index_section].join(' ')}>
-        <h2 className={styles.index_section_title}>Notes</h2>
-        <div className={styles.index_notes_container}>
-          <div className={styles.index_notes_card}>
-            <img className={styles.index_notes_card_image}/>
-            <h5 className={styles.index_notes_card_text}>Notes Title</h5>
-          </div>
-          <div className={styles.index_notes_card}>
-            <img className={styles.index_notes_card_image}/>
-            <h5 className={styles.index_notes_card_text}>Notes Title</h5>
-          </div>
-          <div className={styles.index_notes_card}>
-            <img className={styles.index_notes_card_image}/>
-            <h5 className={styles.index_notes_card_text}>Notes Title</h5>
-          </div>
-        </div>
-      </div> */}
   </Layout>
   )
 }
