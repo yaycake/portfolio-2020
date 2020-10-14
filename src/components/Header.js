@@ -18,13 +18,10 @@ const Header = ({showMenu, children}) => (
         <ul className={styles.header__navlinks}>
             <li> <Link to="/projects/"><h4>Projects </h4></Link></li>
             <li> <a href="https://dev.to/yaycake"><h4>Blog</h4></a> </li>
-            <li> <Link to=""><h4>Contact</h4></Link> </li>
+            <li> <Link to="/contact"><h4>Contact</h4></Link> </li>
             <li> <Link to="/about"><h4>About</h4></Link> </li>
         </ul>
         {children}
-        {/* <div className={styles.header__email}></div> */}
-        {/* <a href="mailto:im@thegraceyang.com"><img className={styles.header__email} src={emailIcon}></img></a>
-         */}
         
     </header>
 )

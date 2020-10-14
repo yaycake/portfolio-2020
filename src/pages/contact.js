@@ -21,16 +21,16 @@ const ContactPage = (props) => {
 
                 <div className={styles.contact_form}>
                     <form name="contact" method="POST" data-netlify="true">
-                        <div>
+                        <div className={styles.form_inputs}>
                             <label>Your Name</label>  <input type="text" name="name" />  
                         </div>
-                        <div>
+                        <div className={styles.form_inputs}>
                             <label>Your Email </label><input type="email" name="email" />
                         </div>
-                        <div>
+                        <div className={styles.form_inputs}>
                             <label>Message </label><textarea name="message"></textarea>
                         </div>
-                        <div>
+                        <div className={styles.form_inputs}>
                             <button type="submit">Send</button>
                         </div>
                     </form>

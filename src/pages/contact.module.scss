@@ -9,9 +9,10 @@
     margin: auto; 
     margin-top: 3rem; 
 
-    div { 
+    .form_inputs { 
         @include flex_column; 
-        margin-bottom: 2rem; 
+        margin: 2rem auto;
+        justify-content: center; 
     }
 
     label { 
@@ -20,9 +21,15 @@
     }
     
     @include desktop {
-        max-width: 400px; 
+        .form_inputs { 
+            max-width: 400px;
+        }
     }
+
+  
 }
+
+
 
 section { 
     @include bodySections
@@ -40,9 +47,9 @@ textarea {
     border-bottom: 1px solid black;
 }
 
-button { 
+.contact_form > form > div > button { 
     background-color: $first-dark; 
-    // width: 150px; 
+    width: 150px; 
     height: 2.5rem; 
     color: white; 
     margin: auto; 

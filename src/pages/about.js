@@ -50,7 +50,7 @@ const AboutPage = (props) => {
         <Section 
           title="Contact Me" 
           action="Let's Chat" 
-          link="/about" 
+          link="/contact" 
           text="If you’ve got a great idea or would like to chat about a unique opportunity, contact me.">
         </Section> 
         
