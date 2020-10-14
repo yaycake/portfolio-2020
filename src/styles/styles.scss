@@ -66,12 +66,18 @@ $light-highlight: #E6FF8D;
     max-width: 300px; 
 }
 
+
+@mixin bodySections { 
+    padding: 5%;
+}
+
 html {
     
 }
 
 body { 
-    margin: 0
+    margin: 0;
+    @include sansSerif; 
 }
 
 small {

@@ -6,11 +6,17 @@ import MobileMenu from "./MobileMenu"
 import styles from './Section.module.scss' 
 
 const Section = ({title, action, link, text, children}) => {
+
+    let templateLink; 
+
+    if (link){
+        templateLink = <h4 className={styles.section_action_desktop}><a href={ link }>{ action } &#8594;</a></h4>
+    }
     return (
         <section className={styles.section_wrapper}>
             <div className={styles.section_header}>
                 <h2 className={styles.section_title}>{ title }</h2>
-                <h4 className={styles.section_action_desktop}><a href={ link }>{ action } &#8594;</a></h4>
+                {link && templateLink}
             </div>
             <h3 className={styles.section_text}>
                 { text }
