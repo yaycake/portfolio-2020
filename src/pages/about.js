@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -27,8 +26,6 @@ const AboutPage = (props) => {
             >
           </div>
 
-          
-
           <div className={styles.about_banner_text}>
             <div>
               <h3>Loves</h3>
@@ -39,7 +36,6 @@ const AboutPage = (props) => {
               <p>Looking for new projects, teams, and opportunities</p>
             </div>
           </div>
-
         </div>
 
         <section>

@@ -1,0 +1,62 @@
+@import '../styles/styles';
+
+.page_title { 
+    @include page_title
+}
+
+.contact_form { 
+   
+    margin: auto; 
+    margin-top: 3rem; 
+
+    div { 
+        @include flex_column; 
+        margin-bottom: 2rem; 
+    }
+
+    label { 
+        @include sansSerif; 
+        font-size: 1rem; 
+    }
+    
+    @include desktop {
+        max-width: 400px; 
+    }
+}
+
+section { 
+    @include bodySections
+}
+
+input { 
+    height: 2.5rem; 
+    border: 1px solid rgba(0,0,0,0);
+    border-bottom: 1px solid black
+}
+
+textarea { 
+    height: 4rem; 
+    border: 1px solid rgba(0,0,0,0);
+    border-bottom: 1px solid black;
+}
+
+button { 
+    background-color: $first-dark; 
+    width: 150px; 
+    height: 2.5rem; 
+    color: white; 
+    margin: auto; 
+    @include sansSerif; 
+    text-transform: uppercase;
+    border-radius: 2px; 
+    border: 1px solid rgba(0,0,0,0);
+    margin-top: 1rem;
+    font-size: 1rem;
+
+}
+
+.contact_footer { 
+    @include flex_column;
+    // text-align: center; 
+    text-align: right; 
+}
