@@ -25,13 +25,12 @@ const Layout = (props) => {
   const clickMenuHandler = () => {
     if (showMenu == true){
       setMenu(false)
-      
     } else {
       setMenu(true)
       document.getElementsByTagName('body')[0].classList.add(styles.noscroll)
     }
     // document.getElementsByTagName('body')[0].classList.toggle(styles.noscroll);
-    console.log(`showMenu: ${showMenu}`)
+    // console.log(`showMenu: ${showMenu}`)
   };
 
 //  if (showMenu) {
@@ -42,9 +41,7 @@ const Layout = (props) => {
 //    console.log("Scroll!")
 //   //  document.getElementsByTagName('body')[0].style.overflow('auto')
 //  }
-
   // const clickMenuHandler = () => {
-
   // }
 
 

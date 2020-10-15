@@ -8,6 +8,7 @@ skills: "product design sprint, brand strategy, digital marketing,  full stack
   development, "
 tools: Sketch, Figma, Illustrator, HTML, CSS, Javascript, Ruby on Rails, postgreSQL
 engagement_period: November 2018 to April 2019
+featured?: false
 description: Digital marketing, international branding strategy, and website
   design & development for an industrial manufacturing company.
 ---

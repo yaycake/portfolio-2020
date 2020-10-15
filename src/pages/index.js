@@ -1,11 +1,11 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-
+import Img from "gatsby-image"; 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
 import styles from "./index.module.scss"; 
-
+import RecentProjects from "../components/recentProjects"
 import Corgis from "../images/corgis.png"
 
 import Section from "../components/Section"
@@ -14,11 +14,6 @@ import Section from "../components/Section"
 
 const IndexPage = (props) => {
 
-  // const data = useStaticQuery(graphql`
-  //   query { 
-  //     allMdx (filter: )
-  //   }
-  // `)
   const siteTitle = "Grace | Design & Code"
 
   return (
@@ -51,21 +46,7 @@ const IndexPage = (props) => {
           {/* <img className={styles.index_about_image} src={Corgis} /> */}
       </Section> 
 
-      <div className={[styles.index_projects, styles.index_section].join(' ')}>
-        <div className={styles.index_projects_header}>
-          <h2 className={styles.index_projects__title}>Recent Projects</h2>
-          <h4 className={styles.index_projects_action_desktop}> <Link to="/projects">View All Projects &#8594;</Link></h4>
-        </div>
-        
-        <div className={styles.index_projects__grid}>
-          <div className={styles.index_projects__grid__project1}></div>
-          <div className={styles.index_projects__grid__project2}></div>
-          <div className={styles.index_projects__grid__project3}></div>
-        </div>
-
-        <h4 className={styles.index_projects_action_mobile}> <Link to="/projects">View All Projects &#8594;</Link></h4>
-      </div>
-
+      <RecentProjects/>
 
       <Section 
         title="Contact Me" 

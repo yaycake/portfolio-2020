@@ -7,6 +7,7 @@ featuredImage: /assets/frebanner.png
 skills: design, digital marketing, social media, user experience, brand strategy
 tools: Squarespace, Mailchimp, HTML, CSS, Javascript
 engagement_period: 2016 to present
+featured?: false
 description: Design on and offline, from flyers, brand assets, email
   campaigns/templates, and content strategy/ custom code on Squarespace.
 ---

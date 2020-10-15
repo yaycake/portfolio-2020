@@ -7,6 +7,7 @@ featuredImage: /assets/stibanner.png
 skills: UX design, UI Design, front-end development, WXML, WXSS, HTML, CSS, Javascript
 tools: Sketch, Figma, Invision, WeChat IDE
 engagement_period: December 2018 to 2019
+featured?: false
 description: A WeChat mini program to discover, share, or save stickers; powered by Giphy.
 ---
 

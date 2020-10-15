@@ -7,6 +7,7 @@ featuredImage: /assets/letsmetbanner-b9336c98b86b9facf50199d481e7617d.png
 skills: User experience design, user interaction design, JAMstack development
 tools: HTML, CSS, React, Redux, React hooks, Sketch
 engagement_period: November 2019 to December 2019
+featured?: false
 description: A React app to surf and curate your favorite art works from around
   the world. Powered by the Met Collection digital database.
 ---

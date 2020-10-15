@@ -8,6 +8,7 @@ skills: User experience design, user interaction design, front-end development,
   REST API
 tools: Javascript, HTML, CSS, Google Firebase
 engagement_period: October 2019 to November 2019
+featured?: false
 description: A vanilla Javascript project to explore and discover our national
   parks powered by the National Parks, Hiking Project, Mountain Project,
   OpenWeather, and Google Maps.

@@ -11,10 +11,11 @@ const ButtonWrapper = styled.button`
   text-align: center;
   box-sizing: border-box;
   text-decoration: none;
-  padding: 10px 25px;
+  padding: 10px 30px;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 2px;
+  height:3rem;
 
   background: ${props => props.props.background || "black"};
   color: ${props => props.props.color || "rgb(255, 255, 255)"};

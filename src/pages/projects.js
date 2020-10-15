@@ -48,23 +48,19 @@ const Projects = (props) => {
   const projectsData = data.allMdx.edges
   const siteTitle = data.site.siteMetadata.title
 
-
-  
-   
-
-    
-
     const projectTiles = projectsData.map(({ node }) => {
       const title = node.frontmatter.title || node.fields.slug
 
       return (
-        <SmallProjectTile 
-          title = {title}
-          path = {node.frontmatter.path}
-          featuredImage = { node.frontmatter.featuredImage.childImageSharp.fluid }
-          slug = { `project${node.fields.slug}`}
-          category = {node.frontmatter.category}
-        ></SmallProjectTile>
+        // <div className={styles.projects_tile_container}>
+          <SmallProjectTile 
+            title = {title}
+            path = {node.frontmatter.path}
+            featuredImage = { node.frontmatter.featuredImage.childImageSharp.fluid }
+            slug = { `project${node.fields.slug}`}
+            category = {node.frontmatter.category}
+          ></SmallProjectTile>
+        // </div>
       )
 
     })
@@ -85,63 +81,3 @@ const Projects = (props) => {
 
 
 export default Projects
-
-// export const pageQuery = graphql`
-//   query {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//     allMdx (sort: { fields: [frontmatter___date], order: DESC }){
-//       edges {
-//         node {
-//           excerpt
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             date(formatString: "MMMM DD, YYYY")
-
-//             featuredImage {
-//               childImageSharp {
-//                 fluid(maxWidth: 800) {
-//                   ...GatsbyImageSharpFluid
-//                 }
-//               }
-//             }
-//             title
-//             description
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
-
-
-// export const pageQuery = graphql`
-//   query {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//     allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
-//       edges {
-//         node {
-//           excerpt
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             date(formatString: "MMMM DD, YYYY")
-//             featuredImage
-//             title
-//             description
-//           }
-//         }
-//       }
-//     }
-//   }
-// `

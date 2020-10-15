@@ -6,9 +6,6 @@ import Image from "gatsby-image"
 
 const SmallProjectTile = ({title, path, featuredImage, slug, category }) => {
 
-    console.log("category:")
-    console.log(category)
-
     return (
         
             <div className={styles.tile_wrapper}>
