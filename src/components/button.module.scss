@@ -1,0 +1,21 @@
+@import '../styles/styles';
+
+.button__wrapper{
+    display: block;
+    color: white;
+    border: none;
+    text-align: center;
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    height:3rem;
+    background-color: $first-dark;
+    border-radius: 5px; 
+    @include sansSerif;
+    :hover {
+        background-color: $dark-highlight
+    }
+}

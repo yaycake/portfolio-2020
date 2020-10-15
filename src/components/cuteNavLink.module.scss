@@ -36,25 +36,23 @@
     }
 }
 
-// .cuteLink_wrapper_active {
-//     position: relative;
-//     @include flex_row;
-//     .linkText {
-//         mix-blend-mode: difference; 
-//     }
-//     .linkSpot { 
-//         position: absolute; 
-//         // z-index: -1;
-//         background-color: $first-dark; 
-//         // mix-blend-mode:difference;
-//         width: 30px;
-//         height:30px; 
-//         border-radius: 50%;
-//         opacity: 1;
-//         top: 0;
-//         bottom: 0;
-//         right: 0; 
-//         left: 0;
-//         margin: auto;
-//     }
-// }
+.cuteLink_wrapper_active {
+    position: relative;
+    @include flex_row;
+
+    .linkSpot { 
+        position: absolute; 
+        // z-index: -1;
+        background-color: $dark-highlight; 
+        mix-blend-mode:difference;
+        width: 30px;
+        height:30px; 
+        border-radius: 50%;
+        opacity: 1;
+        top: 0;
+        bottom: 0;
+        right: 0; 
+        left: 0;
+        margin: auto;
+    }
+}

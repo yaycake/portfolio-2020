@@ -1,8 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
 import styles from './SmallProjectTile.module.scss'
 import Image from "gatsby-image"
+
+import CuteNavLink from "./cuteNavLink"
 
 const SmallProjectTile = ({title, path, featuredImage, slug, category }) => {
 
@@ -18,6 +19,8 @@ const SmallProjectTile = ({title, path, featuredImage, slug, category }) => {
                         </h3>
                     </div>
                 </Link>
+               
+                
             </div>
     )
 }

@@ -1,22 +1,12 @@
 import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
-import MenuToggle from "./MenuToggle"
 import CuteNavLink from "./cuteNavLink"
-import MobileMenu from "./MobileMenu"
 import styles from './Header.module.scss'
-import emailIcon from "../../content/assets/icon_email.svg"
+
 
 const Header = ({showMenu, children}) => (
     <header className={styles.header}
         style={ showMenu ? {position: "absolute"} : {position: "relative"}}
     >
-        {/* <Link className={styles.header__logo} to="/"
-            style = {
-                showMenu ? { position: "fixed"} : {position: "absolute"}
-            }
-        >Grace Yang</Link> */}
-
         <div className={styles.header__logo} 
             style = { showMenu ? { position: "fixed"} : {position: "absolute"}}>
             <CuteNavLink
@@ -64,7 +54,6 @@ const Header = ({showMenu, children}) => (
             </li>
         </ul>
         {children}
-        
     </header>
 )
 

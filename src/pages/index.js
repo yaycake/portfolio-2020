@@ -7,8 +7,6 @@ import CuteNavLink from "../components/cuteNavLink"
 import Button from "../components/button"
 import styles from "./index.module.scss"; 
 import RecentProjects from "../components/recentProjects"
-import Corgis from "../images/corgis.png"
-
 import Section from "../components/Section"
 
 
@@ -32,10 +30,14 @@ const IndexPage = (props) => {
         <h1 className={styles.banner_landing__greeting}>
           I design &amp; code.
         </h1>
-        <h3 className={styles.banner_landing__text}> I help people move their brand and products into the future. <br /> Got an idea?</h3>
-        <Link to="/contact">
-          <Button className={styles.banner_landing__button} marginTop="3rem">Contact Me</Button>
-        </Link>
+        <h3 className={styles.banner_landing__text}> I help people move their brand and products into the future.</h3>
+          <CuteNavLink
+            path = "/contact"
+            altText = "Contact Me"
+            external={false}
+          >
+            <h3>Got an idea?</h3>
+          </CuteNavLink>
       </div>
 
 
