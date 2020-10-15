@@ -1,0 +1,60 @@
+@import '../styles/styles';
+
+.cuteLink_wrapper{
+    position: relative;
+    background-color: white;
+    @include flex_row;
+}
+
+.linkSpot { 
+    position: absolute; 
+    // z-index: 4;
+    background-color: $dark-highlight; 
+    // mix-blend-mode: screen;
+    width: 30px;
+    height:30px; 
+    border-radius: 50%;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    right: 0; 
+    left: 0;
+    margin: auto;
+}
+
+.linkText {
+    mix-blend-mode: normal;
+    z-index: 3;
+}
+
+.cuteLink_wrapper:hover {
+    .linkSpot { 
+        opacity: 1
+    }
+    .linkText{
+        mix-blend-mode: difference
+    }
+}
+
+// .cuteLink_wrapper_active {
+//     position: relative;
+//     @include flex_row;
+//     .linkText {
+//         mix-blend-mode: difference; 
+//     }
+//     .linkSpot { 
+//         position: absolute; 
+//         // z-index: -1;
+//         background-color: $first-dark; 
+//         // mix-blend-mode:difference;
+//         width: 30px;
+//         height:30px; 
+//         border-radius: 50%;
+//         opacity: 1;
+//         top: 0;
+//         bottom: 0;
+//         right: 0; 
+//         left: 0;
+//         margin: auto;
+//     }
+// }

@@ -3,6 +3,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"; 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import CuteNavLink from "../components/cuteNavLink"
 import Button from "../components/button"
 import styles from "./index.module.scss"; 
 import RecentProjects from "../components/recentProjects"

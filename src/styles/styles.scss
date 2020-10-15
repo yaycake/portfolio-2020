@@ -1,6 +1,6 @@
 $first-dark: #000000; 
 $second-dark: #000000;
-$dark-highlight: #000000;
+$dark-highlight: #e3fc03;
 
 $first-light: #EFEFEF;
 $second-light: #7CE6D2;
@@ -15,10 +15,6 @@ $light-highlight: #E6FF8D;
 @mixin serif { 
     font-family: 'merriweather'
 }
-// @import 'typeface-lexend-deca';
-
-// $primary-font: 'lexend-deca';
-
 
 @mixin mobile {
     @media (max-width: 320px) {
@@ -123,19 +119,5 @@ a {
 a:hover {
     // color:$dark-highlight
     // text-shadow: 2px 4px 4px rgba(0,0,0,.1)
-    ::after{
-        content: ''; 
-
-        height:3px;
-        width:3px;
-        border-radius:50%;
-        border:2px solid orange;
-        background-color: orange;
-        position: absolute;
-        top:0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        margin: auto; 
-    }
+  
 }
