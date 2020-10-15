@@ -48,12 +48,6 @@ const Projects = (props) => {
   const projectsData = data.allMdx.edges
   const siteTitle = data.site.siteMetadata.title
 
-
-  
-   
-
-    
-
     const projectTiles = projectsData.map(({ node }) => {
       const title = node.frontmatter.title || node.fields.slug
 
