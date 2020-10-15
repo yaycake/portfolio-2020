@@ -1,8 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
-import MenuToggle from "./MenuToggle"
-import MobileMenu from "./MobileMenu"
+import CuteNavLink from "./cuteNavLink"
 import styles from './Section.module.scss' 
 
 const Section = ({title, action, link, text, children}) => {
@@ -10,7 +8,19 @@ const Section = ({title, action, link, text, children}) => {
     let templateLink; 
 
     if (link){
-        templateLink = <h4 className={styles.section_action_desktop}><a href={ link }>{ action } &#8594;</a></h4>
+        templateLink = 
+        (<div className={styles.section_action_desktop}>
+            <CuteNavLink 
+            path = { link }
+            altText={action}
+            external={false}
+            >
+                <h4>{action} &#8594;</h4></CuteNavLink>
+
+           
+        </div>)
+       
+        // <h4 className={styles.section_action_desktop}><a href={ link }>{ action } </a></h4>
     }
     return (
         <section className={styles.section_wrapper}>

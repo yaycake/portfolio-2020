@@ -11,11 +11,20 @@ const Header = ({showMenu, children}) => (
     <header className={styles.header}
         style={ showMenu ? {position: "absolute"} : {position: "relative"}}
     >
-        <Link className={styles.header__logo} to="/"
+        {/* <Link className={styles.header__logo} to="/"
             style = {
                 showMenu ? { position: "fixed"} : {position: "absolute"}
             }
-        >Grace Yang</Link>
+        >Grace Yang</Link> */}
+
+        <div className={styles.header__logo} 
+            style = { showMenu ? { position: "fixed"} : {position: "absolute"}}>
+            <CuteNavLink
+                path="/"
+                altText="Go Home"
+                external={false}
+            ><span>Grace Yang</span></CuteNavLink>
+        </div>
         <ul className={styles.header__navlinks}>
             <li> 
                 <CuteNavLink

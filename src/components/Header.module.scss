@@ -22,9 +22,6 @@
     font-size: 36px; 
     width: 210px;
     z-index: 5; 
-    a {
-        color: $first-dark;
-    }
     
 
     @include desktop {

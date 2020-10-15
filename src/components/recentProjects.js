@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import CuteNavLink from "./cuteNavLink"
 import Img from "gatsby-image"
 import styles from "./recentProjects.module.scss"
 import Header from "./Header"
@@ -41,8 +42,16 @@ const RecentProjects = () => {
   return (
     <div className={[styles.index_projects, styles.index_section, styles.recent_projects_wrapper].join(' ')}>
         <div className={styles.index_projects_header}>
+            
             <h2 className={styles.index_projects__title}>Recent Projects</h2>
-            <h4 className={styles.index_projects_action_desktop}> <Link to="/projects">View All Projects &#8594;</Link></h4>
+            <div className={styles.index_projects_action_desktop}>
+              <CuteNavLink
+                path="/projects"
+                altText="My Projects"
+                external={false}
+              > <h4> View All Projects &#8594;</h4>
+              </CuteNavLink>
+            </div>
         </div>
         
         <div className={styles.index_projects__grid}>

@@ -2,7 +2,7 @@
 
 .cuteLink_wrapper{
     position: relative;
-    background-color: white;
+
     @include flex_row;
 }
 
@@ -11,8 +11,8 @@
     // z-index: 4;
     background-color: $dark-highlight; 
     // mix-blend-mode: screen;
-    width: 30px;
-    height:30px; 
+    width: 35px;
+    height:35px; 
     border-radius: 50%;
     opacity: 0;
     top: 0;
@@ -23,7 +23,7 @@
 }
 
 .linkText {
-    mix-blend-mode: normal;
+    // mix-blend-mode: normal;
     z-index: 3;
 }
 
@@ -32,7 +32,7 @@
         opacity: 1
     }
     .linkText{
-        mix-blend-mode: difference
+        // mix-blend-mode: difference
     }
 }
 
