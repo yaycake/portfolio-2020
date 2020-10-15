@@ -10,6 +10,10 @@ const RecentProjects = () => {
       allMdx(filter: {frontmatter: {featured_: {eq: true}}}) {
         edges {
           node {
+              excerpt
+              fields {
+                  slug
+              }
             frontmatter {
               path
               featuredImage {
@@ -35,16 +39,17 @@ const RecentProjects = () => {
   const featured = data.allMdx.edges; 
 
   return (
-    <div className={[styles.index_projects, styles.index_section].join(' ')}>
+    <div className={[styles.index_projects, styles.index_section, styles.recent_projects_wrapper].join(' ')}>
         <div className={styles.index_projects_header}>
             <h2 className={styles.index_projects__title}>Recent Projects</h2>
             <h4 className={styles.index_projects_action_desktop}> <Link to="/projects">View All Projects &#8594;</Link></h4>
         </div>
         
         <div className={styles.index_projects__grid}>
+
             <div className={styles.index_projects__grid__project1}>
                 <Link to={`project/${featured[0].node.frontmatter.path}`}>
-                    <Img className={styles.projects__grid__img} fluid={featured[0].node.frontmatter.featuredImage.childImageSharp.fluid}/>
+                    <Img className={styles.projects__grid__image} fluid={featured[0].node.frontmatter.featuredImage.childImageSharp.fluid}/>
                     <div className={styles.projects__grid__content}>
                         <span className={styles.projects__grid__title}>{featured[0].node.frontmatter.title} </span>
                         <span>{featured[0].node.frontmatter.category}</span>
@@ -56,7 +61,7 @@ const RecentProjects = () => {
             
             <div className={styles.index_projects__grid__project2}>
                 <Link to={`project/${featured[1].node.frontmatter.path}`}>
-                    <Img fluid={featured[1].node.frontmatter.featuredImage.childImageSharp.fluid}/>
+                    <Img className={styles.projects__grid__image} fluid={featured[1].node.frontmatter.featuredImage.childImageSharp.fluid}/>
                     <div className={styles.projects__grid__content}>
                     
                     <span className={styles.projects__grid__title}>{featured[1].node.frontmatter.title} </span>
@@ -68,7 +73,7 @@ const RecentProjects = () => {
         
             <div className={styles.index_projects__grid__project3}>
                 <Link to={`project/${featured[2].node.frontmatter.path}`}>
-                <Img fluid={featured[2].node.frontmatter.featuredImage.childImageSharp.fluid}/>
+                <Img className={styles.projects__grid__image} fluid={featured[2].node.frontmatter.featuredImage.childImageSharp.fluid}/>
                 <div className={styles.projects__grid__content}>
                     
                     <span className={styles.projects__grid__title}>{featured[2].node.frontmatter.title} </span>
@@ -78,7 +83,7 @@ const RecentProjects = () => {
                 </Link>
 
             </div>
-            </div>
+        </div>
 
         <h4 className={styles.index_projects_action_mobile}> <Link to="/projects">View All Projects &#8594;</Link></h4>
     </div>

@@ -1,6 +1,6 @@
-$first-dark: #1E2075; 
-$second-dark: #2781AC;
-$dark-highlight: #FF6F00;
+$first-dark: #000000; 
+$second-dark: #000000;
+$dark-highlight: #000000;
 
 $first-light: #EFEFEF;
 $second-light: #7CE6D2;
@@ -115,10 +115,27 @@ h4 {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: underline;
     color: $second-dark;
+    position:relative;
 }
 
 a:hover {
-    color:$dark-highlight
+    // color:$dark-highlight
+    // text-shadow: 2px 4px 4px rgba(0,0,0,.1)
+    ::after{
+        content: ''; 
+
+        height:3px;
+        width:3px;
+        border-radius:50%;
+        border:2px solid orange;
+        background-color: orange;
+        position: absolute;
+        top:0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto; 
+    }
 }
