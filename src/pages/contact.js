@@ -32,7 +32,7 @@ const ContactPage = (props) => {
                             <label>Message </label><textarea name="message"></textarea>
                         </div>
                         <div className={styles.form_inputs}>
-                            <button type="submit">Send</button>
+                            <button className = { styles.submit_button } type="submit">Send</button>
                         </div>
                     </form>
                 </div>

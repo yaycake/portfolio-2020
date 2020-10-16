@@ -30,13 +30,41 @@ section {
 input { 
     height: 2.5rem; 
     border: 1px solid rgba(0,0,0,0);
-    border-bottom: 1px solid black
+    border-bottom: 1px solid black; 
+    text-indent: 1rem;
+    &:focus { 
+        outline: none; 
+        background-color: rgba(227, 252, 3, .5);
+    }
 }
 
+.submit_button {
+    cursor:pointer;
+
+    &:hover { 
+        color: black ;
+        background-color: $dark-highlight
+    }
+
+    &:focus { 
+        color: black ;
+        background-color: $dark-highlight;
+        outline: none; 
+    }
+}
+
+
 textarea { 
+    text-indent: 1rem;
+    padding-top: .75rem;
+    @include bodyFont;
     height: 4rem; 
     border: 1px solid rgba(0,0,0,0);
     border-bottom: 1px solid black;
+    &:focus { 
+        outline: none; 
+        background-color: rgba(227, 252, 3, .5);
+    }
 }
 
 .contact_form > form > div > button { 

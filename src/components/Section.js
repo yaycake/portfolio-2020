@@ -49,7 +49,7 @@ const Section = ({title, action, link, text, children}) => {
             </h3>
 
             {/* <div className={styles.section_image_child}> */}
-                {children}
+            {children}
             {/* </div> */}
 
             {mobileLink}
