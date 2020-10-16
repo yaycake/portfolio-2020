@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import styled, { withTheme } from "styled-components"
 import styles from './MenuToggle.module.scss'
 
-const MenuToggle = ({clicked, showMenu}) => {
+const MenuToggle = ({clicked, showMenu, keyed}) => {
 
     let toggleIcon; 
 
@@ -14,7 +14,7 @@ const MenuToggle = ({clicked, showMenu}) => {
     }
 
     return (
-        <div onClick={clicked} className={styles.header__menuToggle} 
+        <div onClick={clicked} onKeyUp={keyed} className={styles.header__menuToggle} 
             style={{
                 backgroundColor: showMenu ? "white" : "black", 
                 border: showMenu ? "2px solid black" : "none"
