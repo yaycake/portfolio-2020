@@ -1,5 +1,6 @@
 import React from "react"
 import CuteNavLink from "./cuteNavLink"
+import { Link } from "gatsby"
 import styles from './Header.module.scss'
 
 
@@ -9,11 +10,13 @@ const Header = ({showMenu, children}) => (
     >
         <div className={styles.header__logo} 
             style = { showMenu ? { position: "fixed"} : {position: "absolute"}}>
-            <CuteNavLink
+            {/* <CuteNavLink
                 path="/"
                 altText="Go Home"
                 external={false}
-            ><span>Grace Yang</span></CuteNavLink>
+            ><span>Grace Yang</span></CuteNavLink> */}
+
+            <Link to="/">Grace Yang</Link>
         </div>
         <ul className={styles.header__navlinks}>
             <li> 
