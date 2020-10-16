@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import Section from "../components/Section"
 import { Link } from "gatsby"
 import styles from "./contact.module.scss"
+import CuteNavLink from "../components/cuteNavLink"
 
 const ContactPage = (props) => {
 
@@ -40,15 +41,29 @@ const ContactPage = (props) => {
                 title="Not ready to talk?"
             >
                 <div className={styles.contact_footer}>
-                    <p>
-                        Browse my <Link to ="/projects/">projects &#8594;</Link>
-                        <br></br>
-                        Check out my code on <a href="http://www.github.com/yaycake">Github &#8594;</a>
-                        <br></br>
-                        Read about how I code on <a href="https://dev.to/yaycake">Dev.to &#8594;</a>
-                        <br></br>
-                        Gawk at my <Link to="/resume">resume</Link> or <a href="https://www.linkedin.com/in/ygrace/">LinkedIn &#8594;</a> 
-                    </p>
+                    <CuteNavLink
+                        path = "http://www.github.com/yaycake"
+                        altText = "My Github"
+                        external = { true }
+                    >
+                        <p>Check out my code on Github &#8594;</p>
+                    </CuteNavLink>
+
+                    <CuteNavLink
+                        path = "https://dev.to/yaycake"
+                        altText = "My Dev.to blog"
+                        external = { true }
+                    >
+                        <p>Read about how I code &#8594;</p>
+                    </CuteNavLink>
+
+                    <CuteNavLink
+                        path = "https://www.linkedin.com/in/ygrace/"
+                        altText = "My LinkedIn"
+                        external = { false }
+                    >
+                        <p>or view my LinkedIn Profile &#8594;</p>
+                    </CuteNavLink>
                 </div>
             </Section>
 

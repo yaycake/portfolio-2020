@@ -7,6 +7,8 @@ const Section = ({title, action, link, text, children}) => {
 
     let templateLink; 
 
+    let mobileLink; 
+
     if (link){
         templateLink = 
         (<div className={styles.section_action_desktop}>
@@ -19,6 +21,20 @@ const Section = ({title, action, link, text, children}) => {
 
            
         </div>)
+
+        mobileLink = (
+
+            <div className={styles.section_action_mobile}>
+                <CuteNavLink
+                    path = { link }
+                    altText = { action }
+                    external = { true }
+                >
+                    <h3> { action }</h3>
+                </CuteNavLink>
+            </div>
+            
+        )
        
         // <h4 className={styles.section_action_desktop}><a href={ link }>{ action } </a></h4>
     }
@@ -36,7 +52,8 @@ const Section = ({title, action, link, text, children}) => {
                 {children}
             {/* </div> */}
 
-            <h3 className={styles.section_action_mobile}><a href={ link }>{ action } &#8594;</a></h3>
+            {mobileLink}
+            {/* <h3 className={styles.section_action_mobile}><a href={ link }>{ action } &#8594;</a></h3> */}
 
         </section>
     )

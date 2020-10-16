@@ -56,4 +56,15 @@ textarea {
 .contact_footer { 
     @include flex_column;
     text-align: right; 
+    width: 300px; 
+    @include desktop { 
+        position: absolute; 
+        right: 0; 
+        bottom: 0;
+    }
+}
+
+.contact_footer > a { 
+    display: flex;
+    flex-direction: row-reverse!important;; 
 }
