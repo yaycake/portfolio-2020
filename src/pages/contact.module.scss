@@ -5,31 +5,23 @@
 }
 
 .contact_form { 
-   
     margin: auto; 
     margin-top: 3rem; 
-
     .form_inputs { 
         @include flex_column; 
         margin: 2rem auto;
         justify-content: center; 
     }
-
     label { 
         @include sansSerif; 
         font-size: 1rem; 
     }
-    
     @include desktop {
         .form_inputs { 
             max-width: 400px;
         }
     }
-
-  
 }
-
-
 
 section { 
     @include bodySections
@@ -59,11 +51,20 @@ textarea {
     border: 1px solid rgba(0,0,0,0);
     margin-top: 1rem;
     font-size: 1rem;
-
 }
 
 .contact_footer { 
     @include flex_column;
-    // text-align: center; 
     text-align: right; 
+    width: 300px; 
+    @include desktop { 
+        position: absolute; 
+        right: 0; 
+        bottom: 0;
+    }
+}
+
+.contact_footer > a { 
+    display: flex;
+    flex-direction: row-reverse!important;; 
 }
