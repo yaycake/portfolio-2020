@@ -19,12 +19,17 @@ const Layout = (props) => {
 
   useEffect(() => {
     setMenu(false);
-    document.getElementsByTagName('body')[0].classList.remove(styles.noscroll)
+    
   }, [])
 
+  console.log(showMenu)
+
   const clickMenuHandler = () => {
+    console.log("in ClickMenuHandler")
+    console.log("is menu showing?" + showMenu)
     if (showMenu == true){
       setMenu(false)
+      document.getElementsByTagName('body')[0].classList.remove(styles.noscroll)
     } else {
       setMenu(true)
       document.getElementsByTagName('body')[0].classList.add(styles.noscroll)
