@@ -26,7 +26,10 @@ class ProjectTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
+        <div className={styles.project_wrapper}>
 
+
+       
         <h1 className={styles.page_title}>{post.frontmatter.title}</h1>
 
         <div className={styles.project_banner_wrapper}>
@@ -83,6 +86,7 @@ class ProjectTemplate extends React.Component {
             )}
           </li>
         </ul>
+        </div>
       </Layout>
     )
   }

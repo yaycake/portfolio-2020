@@ -1,5 +1,8 @@
 @import '../styles/styles';
-
+.project_wrapper {
+    max-width:800px; 
+    margin: auto;
+}
 .page_title {
     @include page_title;
 }
