@@ -5,9 +5,9 @@
   
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
-    border-radius: 2px; 
-    height: 30px;
-    width: 30px;
+    border-radius: 50%; 
+    height: 35px;
+    width: 35px;
     position: fixed; 
     z-index: 4; 
     top: 2rem; 
@@ -39,9 +39,8 @@
     height: 0; 
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    
-    border-top: 10px solid #fff;
-    margin-top: 10px; 
+    border-top: 13px solid #fff;
+    margin-top: 12px;
 }
 
 .x2 {
