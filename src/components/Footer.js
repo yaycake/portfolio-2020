@@ -20,9 +20,9 @@ const Footer = () => {
         <div className={styles.footer_wrapper}>
             <div className={styles.footer_section_wrapper}>
                 <div className={[styles.footer_section, styles.footer_section_1].join(' ')}>
-                    <Link className = {styles.footer_links} to="/projects"><p>Projects</p></Link>
-                    <Link className = {styles.footer_links} to="/diary"><p>Diary</p></Link>
-                    <Link className = {styles.footer_links} to="/contact"><p>Contact</p></Link>
+                    <Link className={styles.footer_links} to="/projects"><p>Projects</p></Link>
+                    <Link className={styles.footer_links} to="/diary"><p>Diary</p></Link>
+                    <Link className={styles.footer_links} to="/contact"><p>Contact</p></Link>
                 </div>
 
                 <div className={styles.footer_section_2}>
@@ -37,11 +37,10 @@ const Footer = () => {
                     <div className={styles.footerSpot}></div>
                 </div>
 
-
                 <div className={[styles.footer_section, styles.footer_section_3].join(' ')}>
-                    <a className = {styles.footer_links} href="https://github.com/yaycake"><p>Github</p></a>
-                    <a className = {styles.footer_links} href="https://www.linkedin.com/in/ygrace/"><p>LinkedIn</p></a>
-                    <Link className = {styles.footer_links} to="/resume"><p>Resumé</p></Link>
+                    <a className={styles.footer_links} href="https://github.com/yaycake"><p>Github</p></a>
+                    <a className={styles.footer_links} href="https://www.linkedin.com/in/ygrace/"><p>LinkedIn</p></a>
+                    <Link className={styles.footer_links} to="/resume"><p>Resumé</p></Link>
                 </div>
             </div>
         </div>
