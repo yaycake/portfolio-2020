@@ -19,6 +19,6 @@ collections:
       - { name: skills, label: Skills }
       - { name: tools, label: tools }
       - { name: engagement_period, label: Engagement Period }
-      - { name: featured, label: Featured?, widget: boolean, default: false }
+      - { name: featured, label: Featured?, widget: boolean, default: false, option: true }
       - { name: description, label: Description }
       - { name: body, label: Body, widget: markdown }
