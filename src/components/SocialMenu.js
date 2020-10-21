@@ -10,16 +10,16 @@ import CuteNavLink from "./cuteNavLink"
 // import Dev from '../images/icons/dev.svg'
 
 const SocialMenu = () => {
-    console.log(Github)
-    console.log(Resume)
-    console.log(Linkedin)
-    console.log(Dev)
+    // console.log(Github)
+    // console.log(Resume)
+    // console.log(Linkedin)
+    // console.log(Dev)
 
 
-    console.log(typeof Github)
-    console.log(typeof Resume)
-    console.log(typeof Linkedin)
-    console.log(typeof Dev)
+    // console.log(typeof Github)
+    // console.log(typeof Resume)
+    // console.log(typeof Linkedin)
+    // console.log(typeof Dev)
     return (
         <ul className={styles.socialMenu}>
             <li className={styles.socialMenu__item}>
