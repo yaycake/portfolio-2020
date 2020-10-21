@@ -11,7 +11,7 @@ const Header = ({showMenu, children}) => (
         <div className={styles.header__logo} 
             style = { showMenu ? { position: "fixed"} : {position: "absolute"}}>
            
-            <Link aria-label="Grace's Home Page" className={styles.logo__link} to="/">
+            <Link aria-label="Grace's Home Page" title="Go back home" className={styles.logo__link} to="/">
                 <span></span>
                 Grace Yang
             </Link>

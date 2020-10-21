@@ -20,13 +20,13 @@ const Footer = () => {
         <div className={styles.footer_wrapper}>
             <div className={styles.footer_section_wrapper}>
                 <div className={[styles.footer_section, styles.footer_section_1].join(' ')}>
-                    <Link className={styles.footer_links} to="/projects">Projects</Link>
-                    <Link className={styles.footer_links} to="/diary">Diary</Link>
-                    <Link className={styles.footer_links} to="/contact">Contact</Link>
+                    <Link aria-label="Projects Page" title="View Projects" className={styles.footer_links} to="/projects">Projects</Link>
+                    <Link aria-label="Grace's Dev.to Blog" title = "Read Grace's Blog" className={styles.footer_links} to="/blog">Blog</Link>
+                    <Link aria-label = "Contact Grace" title="Message Grace" className={styles.footer_links} to="/contact">Contact</Link>
                 </div>
 
                 <div className={styles.footer_section_2}>
-                    <div className={styles.footer_scrolltop} onClick={scrollToTop} onKeyUp={keyToTop} tabIndex="0" >Scroll To Top</div>
+                    <div role="button" aria-label="Scroll to top of page" className={styles.footer_scrolltop} onClick={scrollToTop} onKeyUp={keyToTop} tabIndex="0" >Scroll To Top</div>
                     <br />
                     <div className={styles.footer_credits}>
                         Website Design &amp; Code <br />
@@ -38,9 +38,9 @@ const Footer = () => {
                 </div>
 
                 <div className={[styles.footer_section, styles.footer_section_3].join(' ')}>
-                    <a className={styles.footer_links} href="https://github.com/yaycake">Github</a>
-                    <a className={styles.footer_links} href="https://www.linkedin.com/in/ygrace/">LinkedIn</a>
-                    <Link className={styles.footer_links} to="/resume">Resumé</Link>
+                    <a aria-label="Grace's Github" className={styles.footer_links} href="https://github.com/yaycake">Github</a>
+                    <a aria-label="Grace's LinkedIn" className={styles.footer_links} href="https://www.linkedin.com/in/ygrace/">LinkedIn</a>
+                    <Link aria-label="Grace's Resume" className={styles.footer_links} to="/resume">Resumé</Link>
                 </div>
             </div>
         </div>

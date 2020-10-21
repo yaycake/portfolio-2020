@@ -16,6 +16,7 @@ const CuteNavLink = ({path, text, altText, external, children}) => {
     } else {
         return (
             <Link 
+                aria-label = { altText }
                 className={styles.cuteLink_wrapper}
                 to={path}
                 alt={altText}
