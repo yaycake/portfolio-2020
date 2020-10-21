@@ -2,15 +2,15 @@ import React from "react"
 import { Link } from "gatsby"
 import styles from './SocialMenu.module.scss'
 
-// import github from '../images/icons/github-48.png'
-// import resume from '../images/icons/resume-48.png'
-// import linkedin from '../images/icons/linkedin-48.png'
-// import dev from '../images/icons/dev.svg'
+import github from '../images/github-48.png'
+import resume from '../images/resume-48.png'
+import linkedin from '../images/linkedin-48.png'
+import dev from '../images/dev.svg'
 
-import github from 'github-48.png'
-import resume from 'resume-48.png'
-import linkedin from 'linkedin-48.png'
-import dev from 'dev.svg'
+// import github from 'github-48.png'
+// import resume from 'resume-48.png'
+// import linkedin from 'linkedin-48.png'
+// import dev from 'dev.svg'
 
 const SocialMenu = () => {
     console.log(github)
