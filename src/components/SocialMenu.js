@@ -7,7 +7,7 @@ import CuteNavLink from "./cuteNavLink"
 import Github from '../images/icons/github-48.png'
 import Resume from '../images/icons/resume-48.png'
 import Linkedin from '../images/icons/linkedin-48.png'
-import Dev from '../dev.svg'
+import Dev from '../images/icons/dev.svg'
 
 const SocialMenu = () => {
     return (
