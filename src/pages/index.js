@@ -24,7 +24,7 @@ const IndexPage = (props) => {
 
       <div className={[styles.banner, styles.index_section].join(' ')}>
         <h1 className={styles.banner_landing__greeting}>
-          I design &amp; code.
+          Design + Code
         </h1>
         <h3 className={styles.banner_landing__text}> I help people move their brand and products into the future.</h3>
           <CuteNavLink
