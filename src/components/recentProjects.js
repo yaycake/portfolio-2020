@@ -57,7 +57,7 @@ const RecentProjects = () => {
         <div className={styles.index_projects__grid}>
 
             <div className={styles.index_projects__grid__project1}>
-                <Link to={`project/${featured[0].node.frontmatter.path}`}>
+                <Link className={styles.imageLink} to={`project/${featured[0].node.frontmatter.path}`}>
                     <Img className={styles.projects__grid__image} fluid={featured[0].node.frontmatter.featuredImage.childImageSharp.fluid}/>
                     <div className={styles.projects__grid__content}>
                         <span className={styles.projects__grid__title}>{featured[0].node.frontmatter.title} </span>

@@ -24,11 +24,52 @@
     width: 210px;
     z-index: 5; 
     
+    a { 
+        @include setBoxShadow;
+    }
+
+    a:hover { 
+        // @include boxShadowHighlight;
+    }
+    a:focus { 
+        outline: none; 
+        border-bottom:2px solid black; 
+        // @include boxShadowHighlight;
+    }
 
     @include desktop {
         // grid-column: 1/span 1; 
         // align-self: end;
         left: 3rem; 
+    }
+}
+
+.logo__link { 
+    position: relative; 
+    span { 
+        z-index: -1;
+        width: 80px;
+        height: 80px;
+        background-color: #e3fc03;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: -1rem;
+        border-radius: 50%;
+        display: none; 
+    }
+
+    &:hover { 
+        span {
+            display: block;
+        }
+    }
+
+    &:focus { 
+        span {
+            display: block;
+        }
     }
 }
 

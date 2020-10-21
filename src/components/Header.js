@@ -10,13 +10,11 @@ const Header = ({showMenu, children}) => (
     >
         <div className={styles.header__logo} 
             style = { showMenu ? { position: "fixed"} : {position: "absolute"}}>
-            {/* <CuteNavLink
-                path="/"
-                altText="Go Home"
-                external={false}
-            ><span>Grace Yang</span></CuteNavLink> */}
-
-            <Link to="/">Grace Yang</Link>
+           
+            <Link aria-label="Grace's Home Page" className={styles.logo__link} to="/">
+                <span></span>
+                Grace Yang
+            </Link>
         </div>
         <ul className={styles.header__navlinks}>
             <li> 
