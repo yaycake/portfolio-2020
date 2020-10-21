@@ -21,7 +21,7 @@ const Footer = () => {
             <div className={styles.footer_section_wrapper}>
                 <div className={[styles.footer_section, styles.footer_section_1].join(' ')}>
                     <Link aria-label="Projects Page" title="View Projects" className={styles.footer_links} to="/projects">Projects</Link>
-                    <Link aria-label="Grace's Dev.to Blog" title = "Read Grace's Blog" className={styles.footer_links} to="/blog">Blog</Link>
+                    <a aria-label="Grace's Dev.to Blog" title = "Read Grace's Blog" className={styles.footer_links} to="https://dev.to/yaycake">Blog</a>
                     <Link aria-label = "Contact Grace" title="Message Grace" className={styles.footer_links} to="/contact">Contact</Link>
                 </div>
 
