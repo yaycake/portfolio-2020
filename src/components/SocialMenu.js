@@ -4,9 +4,9 @@ import styled from "styled-components"
 import styles from './SocialMenu.module.scss'
 import CuteNavLink from "./cuteNavLink"
 
-import Github from '../github-48.png'
-import Resume from '../resume-48.png'
-import Linkedin from '../linkedin-48.png'
+import Github from '../images/icons/github-48.png'
+import Resume from '../images/icons/resume-48.png'
+import Linkedin from '../images/icons/linkedin-48.png'
 import Dev from '../dev.svg'
 
 const SocialMenu = () => {
