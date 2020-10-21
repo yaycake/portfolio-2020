@@ -21,7 +21,8 @@ const ContactPage = (props) => {
                 </p>
 
                 <div className={styles.contact_form}>
-                    <form name="contact" method="POST" data-netlify="true">
+                    <form name="contact" method="POST" data-netlify="true" >
+                        <input type="hidden" name="form-name" value="contact" />
                         <div className={styles.form_inputs}>
                             <label>Your Name</label>  <input type="text" name="name" />  
                         </div>
