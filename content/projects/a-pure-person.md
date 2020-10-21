@@ -3,7 +3,7 @@ path: /a-pure-person
 date: 2020-10-12T11:23:21.310Z
 title: A Pure Person
 category: Web Development
-featuredImage: /assets/screen-shot-2020-10-12-at-7.26.49-pm.png
+featuredImage: /assets/single1.jpg
 skills: Product design, front-end development
 tools: Javascript, HTML, CSS, Sass, GatsbyJS, CurtainsJS, Web Audio API
 engagement_period: July 2020 - September 2020
