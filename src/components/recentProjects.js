@@ -3,7 +3,6 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import CuteNavLink from "./cuteNavLink"
 import Img from "gatsby-image"
 import styles from "./recentProjects.module.scss"
-import Header from "./Header"
 
 const RecentProjects = () => {
     const data = useStaticQuery(graphql`

@@ -1,14 +1,8 @@
 import React from "react"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Section from "../components/Section"
-import Button from "../components/button"
 import styles from "./about.module.scss"; 
-
-// import Me from "../images/me.png"
-
-import Contact from "../components/Contact"
 
 const AboutPage = (props) => {
   
@@ -16,6 +10,10 @@ const AboutPage = (props) => {
 
   return (
       <Layout  location={props.location} title={siteTitle}>
+        <SEO 
+          title="About Grace"
+          keywords = { ['design', 'product development', 'ux', 'ui', 'front end development', 'design', 'react']}
+        />
         <h1 className={styles.page_title}>Meet Me</h1>
 
         <div className={styles.about_banner_wrapper}>

@@ -3,12 +3,7 @@ import { Link } from "gatsby"
 import styles from './SmallProjectTile.module.scss'
 import Image from "gatsby-image"
 
-import CuteNavLink from "./cuteNavLink"
-
 const SmallProjectTile = ({title, path, featuredImage, slug, category }) => {
-
-    console.log(slug)
-
     return (
         
             <div className={styles.tile_wrapper}>
@@ -31,8 +26,6 @@ const SmallProjectTile = ({title, path, featuredImage, slug, category }) => {
                         </span>
                     </div>
                 </Link>
-               
-                
             </div>
     )
 }
