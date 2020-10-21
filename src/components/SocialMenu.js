@@ -7,10 +7,10 @@ import styles from './SocialMenu.module.scss'
 // import linkedin from '../images/icons/linkedin-48.png'
 // import dev from '../images/icons/dev.svg'
 
-import github from './github-48.png'
-import resume from './resume-48.png'
-import linkedin from './linkedin-48.png'
-import dev from './dev.svg'
+import github from 'github-48.png'
+import resume from 'resume-48.png'
+import linkedin from 'linkedin-48.png'
+import dev from 'dev.svg'
 
 const SocialMenu = () => {
     console.log(github)
