@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import Image from "gatsby-image"
@@ -15,6 +15,14 @@ class ProjectTemplate extends React.Component {
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
 
+    const keywordsArray = [ post.frontmatter.category];
+
+    const skillsArray = post.frontmatter.skills.split(', ')
+   
+    skillsArray.map((skill) => {
+        keywordsArray.push(skill);
+    })
+    
     return (
       <Layout 
         location={this.props.location} 
@@ -25,13 +33,14 @@ class ProjectTemplate extends React.Component {
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
+          keywords = { keywordsArray }
         />
         <div className={styles.project_wrapper}>
        
           <h1 className={styles.page_title}>{post.frontmatter.title}</h1>
 
           <div className={styles.project_banner_wrapper}>
-            <Image className={styles.project_featured_image} fluid ={post.frontmatter.featuredImage.childImageSharp.fluid }></Image>
+            <Image alt={post.frontmatter.title} className={styles.project_featured_image} fluid ={post.frontmatter.featuredImage.childImageSharp.fluid }></Image>
             <div className={styles.project_banner_text}>
               <h3> { post.frontmatter.category }</h3>
               <p>{ post.frontmatter.engagement_period }</p>
@@ -58,7 +67,7 @@ class ProjectTemplate extends React.Component {
               <CuteNavLink
                 path = { previous.fields.slug}
                 altText = { previous.frontmatter.title }
-                exteranl = { false }>
+                external = { false }>
                 <h3>← {previous.frontmatter.title}</h3>
               </CuteNavLink>
             )}

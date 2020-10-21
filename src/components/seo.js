@@ -40,6 +40,10 @@ function SEO({ description, lang, meta, keywords, title }) {
           content: metaDescription,
         },
         {
+          property: `og:image`, 
+          content: `/ogimage.png`
+        },
+        {
           property: `og:title`,
           content: title,
         },
