@@ -57,7 +57,7 @@ const Projects = (props) => {
             title = {title}
             path = {node.frontmatter.path}
             featuredImage = { node.frontmatter.featuredImage.childImageSharp.fluid }
-            slug = { `project${node.fields.slug}`}
+            slug = { node.fields.slug }
             category = {node.frontmatter.category}
           ></SmallProjectTile>
         // </div>

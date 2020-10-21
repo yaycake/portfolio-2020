@@ -7,6 +7,8 @@ import CuteNavLink from "./cuteNavLink"
 
 const SmallProjectTile = ({title, path, featuredImage, slug, category }) => {
 
+    console.log(slug)
+
     return (
         
             <div className={styles.tile_wrapper}>
