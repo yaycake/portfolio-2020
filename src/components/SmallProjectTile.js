@@ -10,13 +10,15 @@ const SmallProjectTile = ({title, path, featuredImage, slug, category }) => {
     return (
         
             <div className={styles.tile_wrapper}>
-                <Link to={ slug }>
+                <Link className={styles.tile_link} to={ slug }>
+                    <span className={styles.projectSpot}></span>
                     <Image className={styles.tile_image} fluid ={featuredImage }></Image>
                     <div className={styles.tile_text}>
                         <small className={styles.tile_category}> { category } </small>
-                        <h3 className={styles.tile_title}>
+                        <br></br>
+                        <span className={styles.tile_title}>
                             { title }
-                        </h3>
+                        </span>
                     </div>
                 </Link>
                
