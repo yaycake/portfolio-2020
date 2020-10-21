@@ -7,7 +7,7 @@ featuredImage: /assets/ubibanner.png
 skills: Product design, WeChat development
 tools: Sketch, Figma, WeChat IDE, HTML, CSS, Javascript
 engagement_period: July 2018 to August 2018
-featured: true
+featured: false
 featured?: true
 description: A WeChat Mini Program app guide and social platform for Ubisoft's
   community at ChinaJoy, Asia's largest gaming convention.
