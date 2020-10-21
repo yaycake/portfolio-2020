@@ -6,7 +6,7 @@ import Section from "../components/Section"
 import Button from "../components/button"
 import styles from "./about.module.scss"; 
 
-import Me from "../images/me.png"
+// import Me from "../images/me.png"
 
 import Contact from "../components/Contact"
 
@@ -22,7 +22,7 @@ const AboutPage = (props) => {
 
           <div 
             className={styles.about_banner_image}
-            style={ {background: `url(${Me})` } }
+            style={ {background: `url(../me.png)` } }
             >
           </div>
 

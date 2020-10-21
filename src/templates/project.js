@@ -56,7 +56,7 @@ class ProjectTemplate extends React.Component {
           <li>
             {previous && (
               <CuteNavLink
-                path = { `project${previous.fields.slug}` }
+                path = { previous.fields.slug}
                 altText = { previous.frontmatter.title }
                 exteranl = { false }>
                 <h3>← {previous.frontmatter.title}</h3>
@@ -66,7 +66,7 @@ class ProjectTemplate extends React.Component {
           <li>
             {next && (
               <CuteNavLink
-                path = {`project${next.frontmatter.path}`}
+                path = { next.fields.slug }
                 altText = {next.frontmatter.title}
                 external = { false } >
                  <h3> {next.frontmatter.title} → </h3>

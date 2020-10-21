@@ -42,7 +42,7 @@ exports.createPages = ({ graphql, actions }) => {
      
       
       createPage({
-        path: `project${project.node.fields.slug}`,
+        path: `${project.node.fields.slug}`,
         component: projectPost,
         context: {
           slug: project.node.fields.slug,
