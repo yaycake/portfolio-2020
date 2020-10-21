@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import Section from "../components/Section"
-import { Link } from "gatsby"
 import styles from "./contact.module.scss"
 import CuteNavLink from "../components/cuteNavLink"
 
@@ -11,6 +11,11 @@ const ContactPage = (props) => {
 
     return (
         <Layout location = {props.location} title={siteTitle} >
+            <SEO 
+          title="About Grace"
+          keywords = { ['design', 'product development', 'ux', 'ui', 'front end development', 'design', 'react']}
+        />
+            
             <h1 className={styles.page_title}> Contact Me</h1>
             <section> 
                 <h3> Let's chat product prototyping, digital solutions, user experience, user interaction, design, and/or front end development.</h3>
@@ -24,13 +29,15 @@ const ContactPage = (props) => {
                     <form name="contact" method="POST" data-netlify="true" >
                         <input type="hidden" name="form-name" value="contact" />
                         <div className={styles.form_inputs}>
-                            <label>Your Name</label>  <input type="text" name="name" />  
+                            <label htmlFor="formName">Your Name</label>  
+                            <input id = "formName" type="text" name="name" />  
                         </div>
                         <div className={styles.form_inputs}>
-                            <label>Your Email </label><input type="email" name="email" />
+                            <label htmlFor="formEmail">Your Email </label>
+                            <input id = "formEmail" type="email" name="email" />
                         </div>
                         <div className={styles.form_inputs}>
-                            <label>Message </label><textarea name="message"></textarea>
+                            <label htmlFor="formMessage">Message </label><textarea id = "formMessage" name="message"></textarea>
                         </div>
                         <div className={styles.form_inputs}>
                             <button className = { styles.submit_button } type="submit">Send</button>

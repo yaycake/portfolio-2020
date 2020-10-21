@@ -1,10 +1,8 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import SmallProjectTile from '../components/SmallProjectTile'
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
 import styles from "./projects.module.scss"
 
 
@@ -54,6 +52,7 @@ const Projects = (props) => {
       return (
         // <div className={styles.projects_tile_container}>
           <SmallProjectTile 
+            key = { `${title}_project`}
             title = {title}
             path = {node.frontmatter.path}
             featuredImage = { node.frontmatter.featuredImage.childImageSharp.fluid }
@@ -68,7 +67,10 @@ const Projects = (props) => {
     return (
       <Layout location={props.location} title={siteTitle} subMenu = { {title: "Projects"}}>
         
-        <SEO title="All posts" />
+        <SEO 
+          title="Projects" 
+          keywords = { ['portfolio', 'design', 'front end development', 'ux', 'ui'] }
+          />
         <h1 className={styles.page_title}>Projects</h1>
         <div className={styles.project_tiles_wrapper}>
           { projectTiles && projectTiles }

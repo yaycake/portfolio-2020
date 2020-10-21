@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import Header from "./Header"
 import Footer from "./Footer"
@@ -17,8 +16,6 @@ const Layout = (props) => {
   useEffect(() => {
     setMenu(false);
   }, [])
-
-  console.log(showMenu)
 
   const clickMenuHandler = () => {
     if (showMenu == true){

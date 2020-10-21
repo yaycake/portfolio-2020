@@ -6,8 +6,6 @@ $first-light: #EFEFEF;
 $second-light: #7CE6D2;
 $light-highlight: #E6FF8D;
 
-
-
 @mixin sansSerif { 
     font-family: 'Lexend Deca', sans-serif;
 }
@@ -140,10 +138,4 @@ a {
     text-decoration: none;
     color: $second-dark;
 
-}
-
-a:hover {
-    // color:$dark-highlight
-    // text-shadow: 2px 4px 4px rgba(0,0,0,.1)
-  
 }

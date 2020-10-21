@@ -1,14 +1,10 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"; 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import CuteNavLink from "../components/cuteNavLink"
-import Button from "../components/button"
 import styles from "./index.module.scss"; 
 import RecentProjects from "../components/recentProjects"
 import Section from "../components/Section"
-
 
 
 const IndexPage = (props) => {
@@ -22,9 +18,9 @@ const IndexPage = (props) => {
       >
       <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       <SEO
-      title="Grace"
-      keywords={[`projects`, `gatsby`, `javascript`, `react`]}
-    />
+        title="Grace"
+        keywords={[`projects`, `gatsby`, `javascript`, `react`]}
+      />
 
       <div className={[styles.banner, styles.index_section].join(' ')}>
         <h1 className={styles.banner_landing__greeting}>
@@ -46,7 +42,7 @@ const IndexPage = (props) => {
         action="More About Me" 
         link="/about" 
         text="My digital design and front end development skills are at your service: from product development to innovating your brand’s user digital experience .">
-          {/* <img className={styles.index_about_image} src={Corgis} /> */}
+       
       </Section> 
 
       <RecentProjects/>
