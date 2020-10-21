@@ -22,7 +22,7 @@ const IndexPage = (props) => {
       >
       <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       <SEO
-      title="Home"
+      title="Grace"
       keywords={[`projects`, `gatsby`, `javascript`, `react`]}
     />
 
