@@ -4,10 +4,15 @@ import styled from "styled-components"
 import styles from './SocialMenu.module.scss'
 import CuteNavLink from "./cuteNavLink"
 
-import github from '../images/icons/github-48.png'
-import resume from '../images/icons/resume-48.png'
-import linkedin from '../images/icons/linkedin-48.png'
-import dev from '../images/icons/dev.svg'
+// import github from '../images/icons/github-48.png'
+// import resume from '../images/icons/resume-48.png'
+// import linkedin from '../images/icons/linkedin-48.png'
+// import dev from '../images/icons/dev.svg'
+
+import github from '../github-48.png'
+import resume from '../resume-48.png'
+import linkedin from '../linkedin-48.png'
+import dev from '../dev.svg'
 
 const SocialMenu = () => {
     console.log(github)
