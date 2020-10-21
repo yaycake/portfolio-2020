@@ -20,27 +20,27 @@ const Footer = () => {
         <div className={styles.footer_wrapper}>
             <div className={styles.footer_section_wrapper}>
                 <div className={[styles.footer_section, styles.footer_section_1].join(' ')}>
-                    <Link className={styles.footer_links} to="/projects"><p>Projects</p></Link>
-                    <Link className={styles.footer_links} to="/diary"><p>Diary</p></Link>
-                    <Link className={styles.footer_links} to="/contact"><p>Contact</p></Link>
+                    <Link className={styles.footer_links} to="/projects">Projects</Link>
+                    <Link className={styles.footer_links} to="/diary">Diary</Link>
+                    <Link className={styles.footer_links} to="/contact">Contact</Link>
                 </div>
 
                 <div className={styles.footer_section_2}>
-                    <p className={styles.footer_scrolltop} onClick={scrollToTop} onKeyUp={keyToTop} tabIndex="0" >Scroll To Top</p>
-                    
-                    <p className={styles.footer_credits}>
+                    <div className={styles.footer_scrolltop} onClick={scrollToTop} onKeyUp={keyToTop} tabIndex="0" >Scroll To Top</div>
+                    <br />
+                    <div className={styles.footer_credits}>
                         Website Design &amp; Code <br />
                         By Grace Yang <br />
                         C 2020
-                    </p>
+                    </div>
 
                     <div className={styles.footerSpot}></div>
                 </div>
 
                 <div className={[styles.footer_section, styles.footer_section_3].join(' ')}>
-                    <a className={styles.footer_links} href="https://github.com/yaycake"><p>Github</p></a>
-                    <a className={styles.footer_links} href="https://www.linkedin.com/in/ygrace/"><p>LinkedIn</p></a>
-                    <Link className={styles.footer_links} to="/resume"><p>Resumé</p></Link>
+                    <a className={styles.footer_links} href="https://github.com/yaycake">Github</a>
+                    <a className={styles.footer_links} href="https://www.linkedin.com/in/ygrace/">LinkedIn</a>
+                    <Link className={styles.footer_links} to="/resume">Resumé</Link>
                 </div>
             </div>
         </div>
