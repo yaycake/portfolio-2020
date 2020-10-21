@@ -50,7 +50,16 @@ const SocialMenu = () => {
                         />
                 </a>
             </li>
-            <li className={styles.socialMenu__item}><Link aria-label="Grace's Resume" to="/resume"><img className={styles.social_icons} src={Resume}></img></Link></li>
+            <li className={styles.socialMenu__item}>
+                <Link aria-label="Grace's Resume" 
+                to="/resume">
+                    <img 
+                        className={styles.social_icons} 
+                        // src={Resume}
+                        src = "../resume-48.png"
+                        ></img>
+                </Link>
+            </li>
         </ul>
     )
 }
