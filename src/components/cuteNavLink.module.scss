@@ -2,15 +2,28 @@
 
 .cuteLink_wrapper{
     position: relative;
-    cursor:poin ter;
+    cursor: pointer;
     @include flex_row;
+
+    &:hover {
+        outline: none;
+        .linkSpot { 
+            opacity: 1;
+        }
+    }
+
+    &:focus { 
+        outline: none; 
+        border-bottom: 2px solid $first-dark;
+        .linkSpot { 
+            opacity: 1;
+        }
+    }
 }
 
 .linkSpot { 
     position: absolute; 
-    // z-index: 4;
     background-color: $dark-highlight; 
-    // mix-blend-mode: screen;
     width: 35px;
     height:35px; 
     border-radius: 50%;
@@ -23,17 +36,7 @@
 }
 
 .linkText {
-    // mix-blend-mode: normal;
     z-index: 3;
-}
-
-.cuteLink_wrapper:hover {
-    .linkSpot { 
-        opacity: 1
-    }
-    .linkText{
-        // mix-blend-mode: difference
-    }
 }
 
 .cuteLink_wrapper_active {
@@ -42,9 +45,8 @@
 
     .linkSpot { 
         position: absolute; 
-        // z-index: -1;
         background-color: $dark-highlight; 
-        mix-blend-mode:difference;
+        // mix-blend-mode:difference;
         width: 30px;
         height:30px; 
         border-radius: 50%;
