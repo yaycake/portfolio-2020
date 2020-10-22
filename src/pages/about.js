@@ -46,7 +46,7 @@ const AboutPage = (props) => {
             My digital design and front end development skills are at your service: from product development to innovating your brand’s user digital experience .
           </h3>
 
-          <p>My career began in marketing, event production, and brand strategy. In Chengdu, I was freelancing in graphics, user experience, and user interaction design; after going through a coding bootcamp, she added front-end development to her arsenal, coding in Javascript, Ruby on Rails, HTML/CSS, and WeChat Mini Programs. 
+          <p>My career began in marketing, event production, and brand strategy. In Chengdu, I was freelancing in graphics, user experience, and user interaction design; after going through a coding bootcamp, I added front-end development to the arsenal, coding in Javascript, Ruby on Rails, HTML/CSS, and developing websites &amp; WeChat Mini Programs. 
          </p>
 
 
