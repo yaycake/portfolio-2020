@@ -1,4 +1,6 @@
 import React from "react"
+import ReCAPTCHA from "react-google-recaptcha";
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Section from "../components/Section"
@@ -42,6 +44,9 @@ const ContactPage = (props) => {
                         <div className={styles.form_inputs}>
                             <button className = { styles.submit_button } type="submit">Send</button>
                         </div>
+                        <ReCAPTCHA
+                            sitekey="6LfYINoZAAAAAJjPJD1JL_Ilcm_TCHzzdJ9HrB1G"
+                        />
                     </form>
                 </div>
             </section> 
