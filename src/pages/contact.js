@@ -1,4 +1,6 @@
 import React from "react"
+import ReCAPTCHA from "react-google-recaptcha";
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Section from "../components/Section"
@@ -26,6 +28,10 @@ const ContactPage = (props) => {
                 </p>
 
                 <div className={styles.contact_form}>
+                    <div className={styles.submit_message}>
+                        <h3>Thanks for the message!</h3>
+                        <p>I'll get back to you as soon as possible. Have a wonderful day!</p>    
+                    </div>
                     <form name="contact" method="POST" data-netlify="true" >
                         <input type="hidden" name="form-name" value="contact" />
                         <div className={styles.form_inputs}>
@@ -42,6 +48,9 @@ const ContactPage = (props) => {
                         <div className={styles.form_inputs}>
                             <button className = { styles.submit_button } type="submit">Send</button>
                         </div>
+                        <ReCAPTCHA
+                            sitekey="6LfYINoZAAAAAJjPJD1JL_Ilcm_TCHzzdJ9HrB1G"
+                        />
                     </form>
                 </div>
             </section> 
