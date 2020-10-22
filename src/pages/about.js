@@ -20,18 +20,23 @@ const AboutPage = (props) => {
 
           <div 
             className={styles.about_banner_image}
-            style={ {background: `url(../me.png)` } }
+            style={ {
+              background: `url(../grace_bike.png)`, 
+              backgroundPosition: 'right center', 
+              backgroundSize: 'cover'
+            
+              } }
             >
           </div>
 
           <div className={styles.about_banner_text}>
             <div>
               <h3>Loves</h3>
-              <p> Healthy ankles, healthy ankles, healthy ankles</p>
+              <p> to learn, bike, art, cook, camp, and watch Top Chef.</p>
             </div>
             <div>
               <h3>Currently</h3>
-              <p>Looking for new projects, teams, and opportunities</p>
+              <p>Based in Taipei, learning Three.JS, and looking for new projects, teams, and opportunities.</p>
             </div>
           </div>
         </div>
@@ -41,7 +46,9 @@ const AboutPage = (props) => {
             My digital design and front end development skills are at your service: from product development to innovating your brand’s user digital experience .
           </h3>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>My career began in marketing, event production, and brand strategy. In Chengdu, I was freelancing in graphics, user experience, and user interaction design; after going through a coding bootcamp, she added front-end development to her arsenal, coding in Javascript, Ruby on Rails, HTML/CSS, and WeChat Mini Programs. 
+         </p>
+
 
         </section>
 

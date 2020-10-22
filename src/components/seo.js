@@ -81,7 +81,9 @@ function SEO({ description, lang, meta, keywords, title }) {
             : []
         )
         .concat(meta)}
-    />
+    >
+      <html lang="en" />
+    </Helmet>
   )
 }
 
