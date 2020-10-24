@@ -9,6 +9,8 @@ import CuteNavLink from "../components/cuteNavLink"
 
 const ContactPage = (props) => {
 
+    
+
     const siteTitle = "Contact Grace"
 
     return (
@@ -28,10 +30,10 @@ const ContactPage = (props) => {
                 </p>
 
                 <div className={styles.contact_form}>
-                    <div className={styles.submit_message}>
+                    {/* <div className={styles.submit_message}>
                         <h3>Thanks for the message!</h3>
                         <p>I'll get back to you as soon as possible. Have a wonderful day!</p>    
-                    </div>
+                    </div> */}
                     <form name="contact" method="POST" data-netlify="true" >
                         <input type="hidden" name="form-name" value="contact" />
                         <div className={styles.form_inputs}>
