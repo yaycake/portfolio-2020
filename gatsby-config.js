@@ -26,17 +26,11 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-feed-mdx`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Lexend Deca`,
-            variants: [`400`]
-          },
-          {
-            family: `Roboto`,
-            subsets: [`latin`]
-          },
+          `Lexend Deca`,
+          `Roboto`
         ],
       },
     },
