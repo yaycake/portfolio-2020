@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import styles from './Footer.module.scss'
+import * as styles from './Footer.module.scss'
 
 const Footer = () => {
 
@@ -16,7 +16,7 @@ const Footer = () => {
 
 
     return (
-        <div className={styles.footer_wrapper}>
+        <div className={styles}>
             <div className={styles.footer_section_wrapper}>
                 <div className={[styles.footer_section, styles.footer_section_1].join(' ')}>
                     <Link aria-label="Projects Page" title="View Projects" className={styles.footer_links} to="/projects">Projects</Link>
