@@ -2,8 +2,7 @@
 path: /skyrock-projects
 date: 2021-09-21T05:57:35.759Z
 title: Skyrock Projects
-category: UX design, UI design, Webflow, Javascript, digital consultation,
-  digital marketing
+category: UX design, UI design, Webflow, digital consultant
 featuredImage: /assets/group-2170.png
 skills: Figma, project management, product design, content strategy
 tools: Figma, Illustrator, Webflow, HTML, CSS, digital marketing
@@ -26,19 +25,25 @@ The ability to make these thoughtful design decisions separates digital asset gr
 
 **Examples of abstract, high-level design challenges that face me include:** 
 
-* What kinds of user experiences can we make consistent across the board that reinforces our values, missions, and emphasize the unique value of our products? 
-* Which 'look and feel' decisions can we make to make these user experiences obvious, and our (re)design work invisible -- as in, how do we make conversions more effortless? 
-* Considering technological or resource constraints, how do I optimize workflows/UX for our existing customers to feel excited about next semester's Skyrock offerings while considering existing operations/administrative workflows? 
-* With a variety of stakeholders (digital ops, sales, new customers, current Skyrockers), how do I design a digital user experience across different channels/platforms that are consistent, clear, and easy to follow? 
+\- What kinds of user experiences can we make consistent across the board that reinforces our values, missions, and emphasize the unique value of our products? 
+
+\- Which 'look and feel' decisions can we make to make these user experiences obvious, and our (re)design work invisible -- as in, how do we make conversions more effortless? 
+
+\- Considering technological or resource constraints, how do I optimize workflows/UX for our existing customers to feel excited about next semester's Skyrock offerings while considering existing operations/administrative workflows? 
+
+\- With a variety of stakeholders (digital ops, sales, new customers, current Skyrockers), how do I design a digital user experience across different channels/platforms that are consistent, clear, and easy to follow? 
 
 ![Website iteration Figjam UX](/assets/screen-shot-2021-09-21-at-4.42.34-pm.png "A Figjam section for Skyrock's web and product iterations")
 
 **I also juggle design execution on a daily basis:** 
 
-* Through my front end development experience, very quickly picking up Webflow and training creative on Webflow workflow using CMS and eCommerce
-* Designing graphics, iconography, supervising user interaction design on the website 
-* Drafting UX copy, email templates, social media posts
-* Supervising updates and edits to the website
+\- Through my front end development experience, very quickly picking up Webflow and training creative on Webflow workflow using CMS and eCommerce
+
+\- Designing graphics, iconography, supervising user interaction design on the website 
+
+\- Drafting UX copy, email templates, social media posts
+
+\- Supervising updates and edits to the website
 
 ![UI iconography for the home page](/assets/screen-shot-2021-09-21-at-4.44.09-pm.png "Iconography by me for the home page")
 
