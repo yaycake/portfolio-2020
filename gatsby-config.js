@@ -26,24 +26,25 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-feed-mdx`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Lexend Deca`,
-            variants: [`400`]
-          },
-          {
-            family: `Roboto`,
-            subsets: [`latin`]
-          },
+          `Lexend Deca`,
+          `Roboto`
         ],
       },
     },
     
     {
       resolve: 'gatsby-plugin-sass', 
-      options: {}
+      options: {
+        cssLoaderOptions: {
+          esModule: false, 
+          modules: {
+            namedExport: false,
+          },
+        },
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -129,13 +130,6 @@ module.exports = {
       }
     },
    
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // edit below
-        // trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
