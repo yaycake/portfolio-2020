@@ -37,7 +37,14 @@ module.exports = {
     
     {
       resolve: 'gatsby-plugin-sass', 
-      options: {}
+      options: {
+        cssLoaderOptions: {
+          esModule: false, 
+          modules: {
+            namedExport: false,
+          },
+        },
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
